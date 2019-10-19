@@ -10,13 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="description" content="注：本文大多内容和菜鸟教程相仿，为个人学习笔记可在浏览器console使用$.fn.jquery查看jQuery版本">
+<meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery笔记1">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;19&#x2F;jQuery%E7%AC%94%E8%AE%B01&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
+<meta property="og:description" content="注：本文大多内容和菜鸟教程相仿，为个人学习笔记可在浏览器console使用$.fn.jquery查看jQuery版本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-19T10:03:36.587Z">
+<meta property="og:updated_time" content="2019-10-19T13:39:06.266Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -222,7 +224,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">584字</span>
+      <span class="post-count">798字</span>
     </span>
   </span>
 
@@ -231,7 +233,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -244,9 +246,11 @@
     
     <!-- toc -->
 
-<a id="more"></a>
-<p>可在浏览器console使用$.fn.jquery查看jQuery版本</p>
-<h3 id="jQ语法"><a href="#jQ语法" class="headerlink" title="jQ语法"></a>jQ语法</h3><p>jQuery语法通过选取html元素，并对其选中的元素执行某些操作<br>基础语法：<code>$(selector).action()</code></p>
+
+<blockquote>
+<p>注：本文大多内容和菜鸟教程相仿，为个人学习笔记<br>可在浏览器console使用$.fn.jquery查看jQuery版本<a id="more"></a></p>
+</blockquote>
+<h3 id="jQuery语法"><a href="#jQuery语法" class="headerlink" title="jQuery语法"></a>jQuery语法</h3><p>jQuery语法通过选取html元素，并对其选中的元素执行某些操作<br>基础语法：<code>$(selector).action()</code></p>
 <ul>
 <li><code>$</code>定义jQuery</li>
 <li>选择符<code>(selector)</code>查找和查询html元素</li>
@@ -276,7 +280,17 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <tr>
 <td align="center">简写格式</td>
 <td align="center">无</td>
-<td align="center"><code>$(function(){//执行代码});</code></td>
+<td align="center">`$(function(){</td>
+</tr>
+<tr>
+<td align="center">//执行代码</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">});`</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody></table>
 </li>
@@ -347,6 +361,58 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <td align="center">选择每个<strong>相隔</strong>的（奇数）tr元素</td>
 </tr>
 </tbody></table>
+<h3 id="Jquery事件"><a href="#Jquery事件" class="headerlink" title="Jquery事件"></a>Jquery事件</h3><table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">键盘事件</th>
+<th align="center">表单事件</th>
+<th align="center">文档/窗口事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">click</td>
+<td align="center">keypress</td>
+<td align="center">submit</td>
+<td align="center">load</td>
+</tr>
+<tr>
+<td align="center">dblclick</td>
+<td align="center">keydown</td>
+<td align="center">change</td>
+<td align="center">resize</td>
+</tr>
+<tr>
+<td align="center">mouseenter</td>
+<td align="center">keyup</td>
+<td align="center">focus</td>
+<td align="center">scroll</td>
+</tr>
+<tr>
+<td align="center">mouseleave</td>
+<td align="center"></td>
+<td align="center">blur</td>
+<td align="center">unload</td>
+</tr>
+<tr>
+<td align="center">hover</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.runoob.com/jquery/jquery-events.html" target="_blank" rel="noopener">菜鸟教程</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="jQuery效果——隐藏和显示"><a href="#jQuery效果——隐藏和显示" class="headerlink" title="jQuery效果——隐藏和显示"></a>jQuery效果——隐藏和显示</h3><p><a href="https://www.runoob.com/jquery/jquery-hide-show.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<h3 id="jQuery效果——淡入淡出"><a href="#jQuery效果——淡入淡出" class="headerlink" title="jQuery效果——淡入淡出"></a>jQuery效果——淡入淡出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).fadeIn(&quot;fast&quot;);//淡入</span><br><span class="line">$(&quot;#div1&quot;).fadeOut(&quot;fast&quot;);//淡出</span><br><span class="line">$(&quot;#div1&quot;).fadeToggle(&quot;fast&quot;);//淡入淡出</span><br><span class="line">$(&quot;#div1&quot;).fadeTo(&quot;fast&quot;,0.1);//颜色变淡</span><br></pre></td></tr></table></figure>
+<p>不要忘了这几个函数还有callback参数</p>
+<h3 id="jQuery效果——滑动"><a href="#jQuery效果——滑动" class="headerlink" title="jQuery效果——滑动"></a>jQuery效果——滑动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#flip&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideDown(&quot;slow&quot;);//向下滑出</span><br><span class="line">    $(&quot;#panel&quot;).slideUp(2000);//向上滑入</span><br><span class="line">&#125;);</span><br><span class="line">$(&quot;div.ooo&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideToggle(1000);//滑出滑入</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>不要忘了这几个函数还有callback参数</p>
+<h3 id="jQuery效果——动画"><a href="#jQuery效果——动画" class="headerlink" title="jQuery效果——动画"></a>jQuery效果——动画</h3><p><a href="https://www.runoob.com/jquery/jquery-animate.html" target="_blank" rel="noopener">今晚先学到这儿</a></p>
 
     
 
@@ -491,7 +557,7 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQ语法"><span class="toc-number">1.</span> <span class="toc-text">jQ语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文档就绪事件"><span class="toc-number">2.</span> <span class="toc-text">文档就绪事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery选择器"><span class="toc-number">3.</span> <span class="toc-text">jQuery选择器</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery语法"><span class="toc-number">1.</span> <span class="toc-text">jQuery语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文档就绪事件"><span class="toc-number">2.</span> <span class="toc-text">文档就绪事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery选择器"><span class="toc-number">3.</span> <span class="toc-text">jQuery选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jquery事件"><span class="toc-number">4.</span> <span class="toc-text">Jquery事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery效果——隐藏和显示"><span class="toc-number">5.</span> <span class="toc-text">jQuery效果——隐藏和显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery效果——淡入淡出"><span class="toc-number">6.</span> <span class="toc-text">jQuery效果——淡入淡出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery效果——滑动"><span class="toc-number">7.</span> <span class="toc-text">jQuery效果——滑动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery效果——动画"><span class="toc-number">8.</span> <span class="toc-text">jQuery效果——动画</span></a></li></ol>
                     </div>
                 </span>
             </div>
