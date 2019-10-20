@@ -6,21 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Y-thdong">
-  <title>Thdong</title>
+  <title>jQuery笔记2 | Thdong</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="Thdong‘s blog">
-  
-  <meta name="description" content="Thdong‘s blog">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Thdong">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;page&#x2F;2&#x2F;index.html">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery笔记2">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;20&#x2F;jQuery%E7%AC%94%E8%AE%B02&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="Thdong‘s blog">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-20T11:32:22.805Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -193,32 +189,53 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-BFC解决margin-left塌陷和margin合并" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-jQuery笔记2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/04/BFC%E8%A7%A3%E5%86%B3margin-left%E5%A1%8C%E9%99%B7%E5%92%8Cmargin%E5%90%88%E5%B9%B6/" target="_blank">BFC解决margin-left塌陷和margin合并</a>
-  
+    <h1 class="article-title" itemprop="name">
+      jQuery笔记2
     </h1>
   
 
 
   
   
-<a href="/2019/09/04/BFC%E8%A7%A3%E5%86%B3margin-left%E5%A1%8C%E9%99%B7%E5%92%8Cmargin%E5%90%88%E5%B9%B6/" class="archive-article-date">
-        <time datetime="2019-09-04T13:12:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/" class="archive-article-date">
+        <time datetime="2019-10-20T07:52:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
 </a>
 
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">225字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -226,17 +243,66 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- toc -->
+<a id="more"></a>
+<h3 id="jQuery对象"><a href="#jQuery对象" class="headerlink" title="jQuery对象"></a>jQuery对象</h3><p>标题所指为jQuery包装过的DOM对象即为jQuery对象。<br>在《锋利的jQuery》一书中说到在jQuery对象中无法使用DOM对象的任何方法，同样在DOM对象中也无法使用jQuery对象的方法。经我测验在DOM对象中使用jQuery方法会报错，反之在jQuery对象中使用DOM方法会输出undefined。</p>
+<blockquote>
+<p><strong>强调</strong>：使用#id和getElementById(“id”)所取的对象并不等价</p>
+</blockquote>
+<p><strong>两种对象之间的相互转换</strong>  </p>
+<blockquote>
+<p>jQuery转DOM</p>
+</blockquote>
+<ul>
+<li><code>$(&quot;#ppp&quot;)[0]</code>//因为jQuery对象为一个类数组对象</li>
+<li><code>$(&quot;#ppp&quot;).get(0)</code>//get()为jQuery提供的方法<blockquote>
+<p>DOM转jQuery<br><code>$(document.getElementById(&quot;ppp&quot;))</code>//此时console输出提示即为jQuery对象了，同时在次数也可以验证上面所说jQuery对象为一个类数组对象</p>
+</blockquote>
+<h3 id="附"><a href="#附" class="headerlink" title="附"></a>附</h3>我尝试过在jQuery的动画队列里写入<code>backgroundImage: &#39;linear-gradient(to right, blue , pink)&#39;</code>,但并不能实现，为何?</li>
+</ul>
 
-
-<h3 id="margin-left塌陷"><a href="#margin-left塌陷" class="headerlink" title="margin-left塌陷"></a>margin-left塌陷</h3><p><strong>html</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2019/09/04/BFC%E8%A7%A3%E5%86%B3margin-left%E5%A1%8C%E9%99%B7%E5%92%8Cmargin%E5%90%88%E5%B9%B6/#more">more >></a>
-    
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的浏览<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          YAMA
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/Y-thdong/2019/10/20/jQuery笔记2/" title="jQuery笔记2" target="_blank">https://github.com/Y-thdong/2019/10/20/jQuery笔记2/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -246,16 +312,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/04/BFC%E8%A7%A3%E5%86%B3margin-left%E5%A1%8C%E9%99%B7%E5%92%8Cmargin%E5%90%88%E5%B9%B6/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/19/jQuery%E7%AC%94%E8%AE%B01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery笔记1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -270,658 +396,43 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css三大类元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/01/css%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%85%83%E7%B4%A0/" target="_blank">css三大类元素</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/01/css%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%85%83%E7%B4%A0/" class="archive-article-date">
-        <time datetime="2019-09-01T09:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-<h4 id="1-行级元素（inline-内联）"><a href="#1-行级元素（inline-内联）" class="headerlink" title="1.行级元素（inline/内联）"></a>1.行级元素（inline/内联）</h4>
-    
-    <a class="article-more-a" href="/2019/09/01/css%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%85%83%E7%B4%A0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/01/css%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%85%83%E7%B4%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery对象"><span class="toc-number">1.</span> <span class="toc-text">jQuery对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附"><span class="toc-number">2.</span> <span class="toc-text">附</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-JavaScript变量问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/08/21/JavaScript%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" target="_blank">JavaScript变量问题</a>
-  
-    </h1>
-  
 
+<div id="SOHUCS" sid="jQuery笔记2" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
 
-  
-  
-<a href="/2019/08/21/JavaScript%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2019-08-21T08:16:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
 
-<p>曾经问在工作的前辈，推荐了</p>
-<ol>
-<li>《JavaScript高级程序设计第三版》</li>
-<li>《你不知道的JavaScript》系列
-    
-    <a class="article-more-a" href="/2019/08/21/JavaScript%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/08/21/JavaScript%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript作用域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/08/16/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F/" target="_blank">JavaScript作用域</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/08/16/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="archive-article-date">
-        <time datetime="2019-08-16T14:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）<br><strong>预编译的效果:</strong><br>
-    
-    <a class="article-more-a" href="/2019/08/16/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/08/16/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/08/05/html%E5%9F%BA%E7%A1%80/" target="_blank">html基础</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/08/05/html%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-        <time datetime="2019-08-05T09:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-
-<h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p>表格由 <code>&lt;table&gt;</code>标签来定义。每个表格均有若干行（由 <code>&lt;tr&gt;</code> 标签定义），每行被分割为若干单元格（由 <code>&lt;td&gt;</code>标签定义）。
-    
-    <a class="article-more-a" href="/2019/08/05/html%E5%9F%BA%E7%A1%80/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/08/05/html%E5%9F%BA%E7%A1%80/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/08/01/html%E9%9A%8F%E7%AC%94/" target="_blank">html随笔</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/08/01/html%E9%9A%8F%E7%AC%94/" class="archive-article-date">
-        <time datetime="2019-08-01T06:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-
-
-<p><a id="ksbvf" href="http://www.yama.gz.cn/resourse/drag.jpg" target="_blank" rel="noopener">first(链接跳转例子，勿点！)<a/></p>
-<h4 id="HTML-输出-使用提醒"><a href="#HTML-输出-使用提醒" class="headerlink" title="HTML 输出- 使用提醒"></a>HTML 输出- 使用提醒</h4><p>我们无法确定 HTML 被显示的确切效果。屏幕的大小，以及对窗口的调整都可能导致不同的结果。
-    
-    <a class="article-more-a" href="/2019/08/01/html%E9%9A%8F%E7%AC%94/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/08/01/html%E9%9A%8F%E7%AC%94/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-H5——Canvas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/07/30/H5%E2%80%94%E2%80%94Canvas/" target="_blank">H5——Canvas</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/07/30/H5%E2%80%94%E2%80%94Canvas/" class="archive-article-date">
-        <time datetime="2019-07-30T13:35:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-
-<p><strong>由于服务器更新，其中部分测试资源内容暂未更新</strong><br>我看过一些用Canvas创作特效的例子，非常棒，我讲的连皮毛都不算，只能说介绍下Canvas。
-    
-    <a class="article-more-a" href="/2019/07/30/H5%E2%80%94%E2%80%94Canvas/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/07/30/H5%E2%80%94%E2%80%94Canvas/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法（排序）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/06/30/%E7%AE%97%E6%B3%95%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89/" target="_blank">算法（排序）</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/06/30/%E7%AE%97%E6%B3%95%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89/" class="archive-article-date">
-        <time datetime="2019-06-30T08:56:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-
-
-<h4 id="简易“桶排序”"><a href="#简易“桶排序”" class="headerlink" title="简易“桶排序”"></a>简易“桶排序”</h4><ul>
-<li>“简易桶排序”并不是真正的桶排序，真正的桶排序复杂得多。
-    
-    <a class="article-more-a" href="/2019/06/30/%E7%AE%97%E6%B3%95%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/06/30/%E7%AE%97%E6%B3%95%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据库技术——数据定义与查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/06/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/" target="_blank">数据库技术——数据定义与查询</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/06/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-        <time datetime="2019-06-18T07:17:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-18</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>最近搭建了个人网站<a href="http://www.yama.gz.cn/" target="_blank" rel="noopener">YAMA的个人网站<del>（论坛内容建设ing）</del><sub>已废弃</sub></a><br>对于个人建站教程以及注意事项，可私信（请备注）QQ：2480227471</p>
-    
-    <a class="article-more-a" href="/2019/06/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/06/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -961,8 +472,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
