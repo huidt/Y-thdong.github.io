@@ -236,9 +236,8 @@
 <li>选择符<code>(selector)</code>查找和查询html元素</li>
 <li><code>action()</code>执行对元素的操作<br>【例】隐藏p元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(document.getElementsByTagName(&quot;p&quot;)[0]).hide();</span><br><span class="line">$(&apos;p&apos;).hide();</span><br><span class="line">$(&quot;#ppp&quot;).hide();</span><br><span class="line">$(&quot;p.ppp&quot;).hide();</span><br></pre></td></tr></table></figure>
 <h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br><span class="line">   // 开始写 jQuery 代码...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加载完之前就运行jQ代码，以保证正确性。</li>
-<li><em>简洁写法*</em>与上述写法效果一样<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">   // 开始写 jQuery 代码...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><em>Tips*</em><br>注意到JavaScript也有一个onload入口函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">    // 执行代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加载完之前就运行jQ代码，以保证正确性。<br><strong>简洁写法</strong> 与上述写法效果一样<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">   // 开始写 jQuery 代码...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<strong>Tips</strong><br>注意到JavaScript也有一个onload入口函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">    // 执行代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -260,17 +259,7 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <tr>
 <td align="center">简写格式</td>
 <td align="center">无</td>
-<td align="center">`$(function(){</td>
-</tr>
-<tr>
-<td align="center">//执行代码</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">});`</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><code>$(function(){//执行代码});</code></td>
 </tr>
 </tbody></table>
 </li>
@@ -380,14 +369,9 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <td align="center"></td>
 <td align="center"></td>
 </tr>
-<tr>
-<td align="center"><a href="https://www.runoob.com/jquery/jquery-events.html" target="_blank" rel="noopener">菜鸟教程</a></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
 </tbody></table>
-<h3 id="jQuery效果——隐藏和显示"><a href="#jQuery效果——隐藏和显示" class="headerlink" title="jQuery效果——隐藏和显示"></a>jQuery效果——隐藏和显示</h3><p><a href="https://www.runoob.com/jquery/jquery-hide-show.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<p>详见：<a href="https://www.runoob.com/jquery/jquery-events.html" target="_blank" rel="noopener">菜鸟教程</a> </p>
+<h3 id="jQuery效果——隐藏和显示"><a href="#jQuery效果——隐藏和显示" class="headerlink" title="jQuery效果——隐藏和显示"></a>jQuery效果——隐藏和显示</h3><p>详见：<a href="https://www.runoob.com/jquery/jquery-hide-show.html" target="_blank" rel="noopener">菜鸟教程</a></p>
 <h3 id="jQuery效果——淡入淡出"><a href="#jQuery效果——淡入淡出" class="headerlink" title="jQuery效果——淡入淡出"></a>jQuery效果——淡入淡出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).fadeIn(&quot;fast&quot;);//淡入</span><br><span class="line">$(&quot;#div1&quot;).fadeOut(&quot;fast&quot;);//淡出</span><br><span class="line">$(&quot;#div1&quot;).fadeToggle(&quot;fast&quot;);//淡入淡出</span><br><span class="line">$(&quot;#div1&quot;).fadeTo(&quot;fast&quot;,0.1);//颜色变淡</span><br></pre></td></tr></table></figure>
 <p>不要忘了这几个函数还有callback参数</p>
 <h3 id="jQuery效果——滑动"><a href="#jQuery效果——滑动" class="headerlink" title="jQuery效果——滑动"></a>jQuery效果——滑动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#flip&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideDown(&quot;slow&quot;);//向下滑出</span><br><span class="line">    $(&quot;#panel&quot;).slideUp(2000);//向上滑入</span><br><span class="line">&#125;);</span><br><span class="line">$(&quot;div.ooo&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideToggle(1000);//滑出滑入</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -405,18 +389,18 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <li>色彩动画并不包含在核心 jQuery 库中。如果需要生成颜色动画，您需要从jquery.com下载<a href="http://plugins.jquery.com/color/" target="_blank" rel="noopener">颜色动画</a>插件。</li>
 <li>jQuery中有一个Queue的接口未单独成章，因为其专门为动画服务</li>
 </ul>
-<p>以下为摘抄，源于[菜鸟教程](<a href="https://www.runoob.com/jquery/jquery-animate.html" target="_blank" rel="noopener">https://www.runoob.com/jquery/jquery-animate.html</a></p>
+<p>以下为摘抄，源于 <a href="https://www.runoob.com/jquery/jquery-animate.html" target="_blank" rel="noopener">菜鸟教程</a></p>
 <blockquote>
 <p>jquery中有一个Queue队列的接口，这个模块没有单独拿出来作为一个章节是因为这个是内部专门为动画服务的，Queue队列如同data数据缓存与Deferred异步模型一样，都是jQuery库的内部实现的基础设施<br><em>Queue队列</em><br>队列是一种特殊的线性表，只允许在表的前端（队头）进行删除操作（出队），在表的后端（队尾）进行出入操作（入队），队列的特点是先进先出，最先插入的元素最先被删除。<br>为什么要引入队列?</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">　　a=2;</span><br><span class="line">&#125;,0)</span><br><span class="line">alert(a);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>我们一直习惯于线性的编写代码逻辑，但是在JavaScript编程几乎总是伴随着异步操作：<br>setTImeout，css3Transition/Animation,ajax,dom的绘制，postmessage，web Database 等等，大量异步操作所带来的回调函数会把我们的算法分解，对于“异步+回调”的模式，怎么“拉平”异步操作使之跟同步一样，因为异步操作进行流程控制的时候无非避免的要嵌套大量的回调逻辑，所以就会出现 promises 约定了。<br>那么 jQuery 引入队列其实从一个角度上可以认为：允许一系列函数被异步地调用而不会阻塞程序。<br>看一个代码段：<br><code>$(&quot;#Aaron&quot;).slideUp().fadeIn()</code><br>这是 jQuery 的一组动画链式序列，它的内部其实就是一组队列 Queue，所以队列和 Deferred 地位类似，是一个内部使用的基础设施。<br>当 slideUp 运行时，fadeIn 被放到 fx 队列中<br>当 slideUp 完成后，从队列中被取出运行<br>Queue 函数允许直接操作这个链式调用的行为，同时 Queue 可以指定队列名称获得其他能力而不局限于 fx 队列。<br>jQuery 提供了 2 组队列操作的 API：</p>
-</blockquote>
 <ul>
 <li>jQuery.queue/dequeue</li>
 <li>jQuery.fn.queue/dequeue<br>但是不同与普通队列定义的是：<br>jQuery.queue 和 jQuery.fn.queue 不仅执行出队操作返回队头元素，还会自动执行返回的队头元素<br>fn 是扩展在原型上的高级API是提供给实例使用的<br>.queue/.dequeue 其内部是调用的 .queue，.dequeue 静态的底层方法实现入列与出列</li>
 </ul>
+</blockquote>
 <blockquote>
 <p>动画调度<br>对于 jQuery 的动画的设计我们要分 2 个层面理解：<br>每一个动画效果可以看作一个独立的动画对象，每个对象都实现了针对自己这个动画的生命周期的控制<br>动画对象与动画对象之间其实是没有直接关系，但是为了做到连续调用就需要引入一套队列机制也就是 Queue 来控制对象之间的转换的控制<br>动画的源码：</p>
 </blockquote>
