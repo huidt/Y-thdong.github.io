@@ -10,17 +10,19 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="description" content="简易“桶排序” “简易桶排序”并不是真正的桶排序，真正的桶排序复杂得多。">
+<meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法（排序）">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;06&#x2F;30&#x2F;%E7%AE%97%E6%B3%95%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
+<meta property="og:description" content="简易“桶排序” “简易桶排序”并不是真正的桶排序，真正的桶排序复杂得多。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190630130833931.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190630164406868.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190630164432236.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190630164446428.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-18T14:13:29.764Z">
+<meta property="og:updated_time" content="2019-10-20T06:48:53.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190630130833931.png">
   
@@ -249,9 +251,9 @@
     
     <!-- toc -->
 
-<a id="more"></a>
+
 <h4 id="简易“桶排序”"><a href="#简易“桶排序”" class="headerlink" title="简易“桶排序”"></a>简易“桶排序”</h4><ul>
-<li>“简易桶排序”并不是真正的桶排序，真正的桶排序复杂得多。</li>
+<li>“简易桶排序”并不是真正的桶排序，真正的桶排序复杂得多。<a id="more"></a></li>
 <li>就像5个人得到五个分数，分数范围0-10,那么我们可以设置从0分到10分一共10个桶，都初始化为0，用户输入分数，对应一个分数桶里的数+1，最后再对11个桶进行数值输出，为0的不输出，数值为1就输出1次，为2 就输出2次，便得到排序后的数据啦。</li>
 <li>这种排序理解起来很简单，但是非常占空间，取值范围内的每一个数都需要初始化数组，并且这种简易的算法对于float小数、复杂数据（比如带有附加信息的）无能为力。</li>
 <li>简易“桶排序”时间复杂度为O(M+N)。</li>

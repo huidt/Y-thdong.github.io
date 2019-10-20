@@ -10,13 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="description" content="window对象BOM核心，指当前浏览器对象窗口所有JS全局对象、函数、变量均为window对象成员">
+<meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;11&#x2F;%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
+<meta property="og:description" content="window对象BOM核心，指当前浏览器对象窗口所有JS全局对象、函数、变量均为window对象成员">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-18T14:14:24.909Z">
+<meta property="og:updated_time" content="2019-10-20T06:42:38.409Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -243,9 +245,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!--toc-->
-<a id="more"></a>
 
-<h5 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h5><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
+
+<h5 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h5><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<a id="more"></a><br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
 <h5 id="window尺寸"><a href="#window尺寸" class="headerlink" title="window尺寸"></a>window尺寸</h5><p>window.innerWidth 浏览器窗口内部高度(不包含滚动条)<br>window.innerHeight</p>
 <h5 id="window方法"><a href="#window方法" class="headerlink" title="window方法"></a>window方法</h5><p>window.open(); 打开新窗口（一般会被浏览器拦截）<br>window.close(); 关闭当前窗口</p>
 <h5 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h5><p>（1）setInterval有固定的时间延迟循环调用函数<br>        对应clearInterval(nIntervId);要取消的定时器的 ID。是由 setInterval() 返回的。<br>        值得一提的是，所用的ID池setInterval()和setTimeout()共享，<br>        这意味着你可以在技术上使用clearInterval()和clearTimeout()互换。<br>        但是，为清楚起见，应避免这样做。<br>（2）setTimeout在定时器到期后执行一个函数或指定的一段代码<br>        对应scope.clearTimeout(timeoutID)<br>        您要取消的超时的标识符。此ID是通过对的相应调用返回的setTimeout()。<br>        值得一提的是ID的池使用setTimeout()和setInterval()共享，<br>        这意味着你可以在技术上使用clearTimeout()和clearInterval()互换。<br>        但是，为清楚起见，应避免这样做。</p>

@@ -10,18 +10,18 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:  函数声明==整体==提升 预编译会将函数声明整体提升到函数调用之前。即使函数调用在前，声明在后代码也可正常执行。   变量声明提升">
+  <meta name="description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:">
 <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript作用域">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;08&#x2F;16&#x2F;JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:  函数声明==整体==提升 预编译会将函数声明整体提升到函数调用之前。即使函数调用在前，声明在后代码也可正常执行。   变量声明提升">
+<meta property="og:description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816211431149.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816221218114.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190821095952190.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-18T14:14:45.522Z">
+<meta property="og:updated_time" content="2019-10-20T06:46:30.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816211431149.png">
   
@@ -250,13 +250,14 @@
     
     <!-- toc -->
 
-<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）<br><strong>预编译的效果:</strong></p>
+<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）<br><strong>预编译的效果:</strong><br> <a id="more"></a></p>
 <ul>
 <li><a id="yama">函数声明<strong>==整体==</strong>提升</a><blockquote>
 <p>预编译会将函数声明整体提升到函数调用之前。即使函数调用在前，声明在后代码也可正常执行。</p>
 </blockquote>
 </li>
-<li><a id="ksbvf">变量声明提升<a/><a id="more"></a>
+<li><a id="ksbvf">变量声明提升<a/></li>
+</ul>
 <blockquote>
 <p>预编译会将变量声明提升到使用之前，但变量赋值仍然会在使用之后，比如下面代码执行结果，第一次输出为undefined因为预编译只提升了变量的声明（此时存值为undefined），并没有赋值。</p>
 </blockquote>
@@ -267,8 +268,6 @@
 <li>一切声明的全局变量全是window的属性。<br>
 <strong>总结:</strong><kbd>window就是全局的域</kbd>
 
-</li>
-</ul>
 <p><code>var  a = 123;</code>相当于<code>window {    a:123;    }</code>，我们在访问<code>a</code>时会到<code>window</code>中寻找有没有对应的属性。<br>【例】此处b便是全局对象的属性<br><a id="qwesery"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        function test()</span><br><span class="line">            &#123;</span><br><span class="line">                var a = b = 123;</span><br><span class="line">            &#125;</span><br><span class="line">            test();</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>再来反过来看预编译四部曲（只是一个执行顺序，重在最终的结果）</strong></p>
@@ -572,7 +571,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#预编译"><span class="toc-number">1.</span> <span class="toc-text">预编译</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ksbvf"><span class="toc-number">1.1.</span> <span class="toc-text">预编译前奏：（发生在函数执行前）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-number">1.2.</span> <span class="toc-text">解析==</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#null"><span class="toc-number">1.2.1.</span> <span class="toc-text">同时需注意此处</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#作用域"><span class="toc-number">2.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#null"><span class="toc-number">2.0.1.</span> <span class="toc-text">结合以下代码理解</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#附：关于作用域的补充"><span class="toc-number">2.0.2.</span> <span class="toc-text">附：关于作用域的补充</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#预编译"><span class="toc-number">1.</span> <span class="toc-text">预编译</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-number">1.1.</span> <span class="toc-text">预编译前奏：（发生在函数执行前）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-number">1.2.</span> <span class="toc-text">解析==</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#null"><span class="toc-number">1.2.1.</span> <span class="toc-text">同时需注意此处</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#作用域"><span class="toc-number">2.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#null"><span class="toc-number">2.0.1.</span> <span class="toc-text">结合以下代码理解</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#附：关于作用域的补充"><span class="toc-number">2.0.2.</span> <span class="toc-text">附：关于作用域的补充</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

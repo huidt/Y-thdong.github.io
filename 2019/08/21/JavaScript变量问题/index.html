@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="曾经问在工作的前辈，推荐了  《JavaScript高级程序设计第三版》 《你不知道的JavaScript》系列刚开始看很苦涩，还不能体会到这两本书的厉害之处，随着学习深入渐渐体会到了这两本数的厚重，确实很棒，前者很详细，可以作为系统学习的教材，后者如序言所说从不同而角度带读者领略JavaScript难处。很棒，强力推荐给大家。可以看看YouTube国外最火的web视频已翻译、以及国内的web">
+  <meta name="description" content="曾经问在工作的前辈，推荐了  《JavaScript高级程序设计第三版》 《你不知道的JavaScript》系列">
 <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript变量问题">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;08&#x2F;21&#x2F;JavaScript%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="曾经问在工作的前辈，推荐了  《JavaScript高级程序设计第三版》 《你不知道的JavaScript》系列刚开始看很苦涩，还不能体会到这两本书的厉害之处，随着学习深入渐渐体会到了这两本数的厚重，确实很棒，前者很详细，可以作为系统学习的教材，后者如序言所说从不同而角度带读者领略JavaScript难处。很棒，强力推荐给大家。可以看看YouTube国外最火的web视频已翻译、以及国内的web">
+<meta property="og:description" content="曾经问在工作的前辈，推荐了  《JavaScript高级程序设计第三版》 《你不知道的JavaScript》系列">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-18T14:15:01.633Z">
+<meta property="og:updated_time" content="2019-10-20T06:46:14.574Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -249,9 +249,8 @@
 <p>曾经问在工作的前辈，推荐了</p>
 <ol>
 <li>《JavaScript高级程序设计第三版》</li>
-<li>《你不知道的JavaScript》系列<br>刚开始看很苦涩，还不能体会到这两本书的厉害之处，随着学习深入渐渐体会到了这两本数的厚重，确实很棒，前者很详细，可以作为系统学习的教材，<br>后者如序言所说从不同而角度带读者领略JavaScript难处。很棒，强力推荐给大家。<br>可以看看YouTube<a href="https://www.bilibili.com/video/av48489320/?p=11" target="_blank" rel="noopener">国外最火的web视频</a>已翻译、以及国内的<a href="https://study.163.com/course/courseMain.htm?courseId=1004170004&_trace_c_p_k2_=74bcd1eeabd745c8b0d32729c40f83a6" target="_blank" rel="noopener">web前端开发</a>，都很棒。</li>
+<li>《你不知道的JavaScript》系列<a id="more"></a><br>刚开始看很苦涩，还不能体会到这两本书的厉害之处，随着学习深入渐渐体会到了这两本数的厚重，确实很棒，前者很详细，可以作为系统学习的教材，<br>后者如序言所说从不同而角度带读者领略JavaScript难处。很棒，强力推荐给大家。<br>可以看看YouTube<a href="https://www.bilibili.com/video/av48489320/?p=11" target="_blank" rel="noopener">国外最火的web视频</a>已翻译、以及国内的<a href="https://study.163.com/course/courseMain.htm?courseId=1004170004&_trace_c_p_k2_=74bcd1eeabd745c8b0d32729c40f83a6" target="_blank" rel="noopener">web前端开发</a>，都很棒。</li>
 </ol>
-<a id="more"></a>
 <h4 id="JavaScript变量"><a href="#JavaScript变量" class="headerlink" title="JavaScript变量"></a>JavaScript变量</h4><p>JavaScript的变量是松散型变量，和之前在python中的<kbd>动态机</kbd>很类似，这让我想起了之前的一篇讲<a href="https://blog.csdn.net/qq_42842786/article/details/89427512#osijgh" target="_blank" rel="noopener">python变量</a>的文章，松散型指的是变量可以存任何类型数据，所谓变量只是仅仅是存值得占位符而已。如下操作完全没问题，数据类型动态改变。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var temp = 123;</span><br><span class="line">   temp = &quot;west&quot;;</span><br></pre></td></tr></table></figure>
 <blockquote>
