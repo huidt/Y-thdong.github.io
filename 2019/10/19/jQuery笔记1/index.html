@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Thdong">
 <meta property="og:description" content="注：本文大多内容和菜鸟教程相仿，为个人学习笔记可在浏览器console使用$.fn.jquery查看jQuery版本  jQuery语法jQuery语法通过选取html元素，并对其选中的元素执行某些操作基础语法：$(selector).action()  $定义jQuery 选择符(selector)查找和查询html元素 action()执行对元素的操作【例】隐藏p元素1234$(docu">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-20T03:12:17.691Z">
+<meta property="og:updated_time" content="2019-10-20T03:14:38.255Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -417,8 +417,11 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <p>我们一直习惯于线性的编写代码逻辑，但是在JavaScript编程几乎总是伴随着异步操作：<br>setTImeout，css3Transition/Animation,ajax,dom的绘制，postmessage，web Database 等等，大量异步操作所带来的回调函数会把我们的算法分解，对于“异步+回调”的模式，怎么“拉平”异步操作使之跟同步一样，因为异步操作进行流程控制的时候无非避免的要嵌套大量的回调逻辑，所以就会出现 promises 约定了。<br>那么 jQuery 引入队列其实从一个角度上可以认为：允许一系列函数被异步地调用而不会阻塞程序。<br>看一个代码段：<br><code>$(&quot;#Aaron&quot;).slideUp().fadeIn()</code><br>这是 jQuery 的一组动画链式序列，它的内部其实就是一组队列 Queue，所以队列和 Deferred 地位类似，是一个内部使用的基础设施。<br>当 slideUp 运行时，fadeIn 被放到 fx 队列中<br>当 slideUp 完成后，从队列中被取出运行<br>Queue 函数允许直接操作这个链式调用的行为，同时 Queue 可以指定队列名称获得其他能力而不局限于 fx 队列。<br>jQuery 提供了 2 组队列操作的 API：</p>
 <ul>
 <li>jQuery.queue/dequeue</li>
-<li>jQuery.fn.queue/dequeue<br>但是不同与普通队列定义的是：<br>jQuery.queue 和 jQuery.fn.queue 不仅执行出队操作返回队头元素，还会自动执行返回的队头元素<br>fn 是扩展在原型上的高级API是提供给实例使用的<br>.queue/.dequeue 其内部是调用的 .queue，.dequeue 静态的底层方法实现入列与出列</li>
+<li>jQuery.fn.queue/dequeue</li>
 </ul>
+</blockquote>
+<blockquote>
+<p>但是不同与普通队列定义的是：<br>jQuery.queue 和 jQuery.fn.queue 不仅执行出队操作返回队头元素，还会自动执行返回的队头元素<br>fn 是扩展在原型上的高级API是提供给实例使用的<br>.queue/.dequeue 其内部是调用的 .queue，.dequeue 静态的底层方法实现入列与出列</p>
 </blockquote>
 <blockquote>
 <p>动画调度<br>对于 jQuery 的动画的设计我们要分 2 个层面理解：<br>每一个动画效果可以看作一个独立的动画对象，每个对象都实现了针对自己这个动画的生命周期的控制<br>动画对象与动画对象之间其实是没有直接关系，但是为了做到连续调用就需要引入一套队列机制也就是 Queue 来控制对象之间的转换的控制<br>动画的源码：</p>
