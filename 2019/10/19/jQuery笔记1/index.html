@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Thdong">
 <meta property="og:description" content="注：本文大多内容和菜鸟教程相仿，为个人学习笔记可在浏览器console使用$.fn.jquery查看jQuery版本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-20T12:12:43.056Z">
+<meta property="og:updated_time" content="2019-10-20T12:24:44.466Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -396,7 +396,7 @@ jQuery 函数位于一个 document ready 函数中：这是为了防止在DOM加
 <p>不要忘了这几个函数还有callback参数</p>
 <h3 id="jQuery效果——滑动"><a href="#jQuery效果——滑动" class="headerlink" title="jQuery效果——滑动"></a>jQuery效果——滑动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#flip&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideDown(&quot;slow&quot;);//向下滑出</span><br><span class="line">    $(&quot;#panel&quot;).slideUp(2000);//向上滑入</span><br><span class="line">&#125;);</span><br><span class="line">$(&quot;div.ooo&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#panel&quot;).slideToggle(1000);//滑出滑入</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>不要忘了这几个函数还有callback参数</p>
-<h3 id="jQuery效果——动画"><a href="#jQuery效果——动画" class="headerlink" title="jQuery效果——动画"></a>jQuery效果——动画</h3><p><strong>*默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed 或 absolute。  *</strong></p>
+<h3 id="jQuery效果——动画"><a href="#jQuery效果——动画" class="headerlink" title="jQuery效果——动画"></a>jQuery效果——动画</h3><p> <strong>* 默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed 或 absolute。 *</strong> </p>
 <p> <strong>jQuery animate()</strong><br> 在设置position之后可使用animate开始动画<br> 【例】将divleft设置为250px，则div会向右边移动250px<br> <code>$(&quot;#div1&quot;).animate({left:&#39;200px&#39;});</code></p>
 <blockquote>
 <p>animate()也可以填入slow、fast、ms等属性</p>
