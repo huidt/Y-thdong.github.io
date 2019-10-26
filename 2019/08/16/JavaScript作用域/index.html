@@ -10,18 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript作用域">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;08&#x2F;16&#x2F;JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="预编译预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）预编译的效果:">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816211431149.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816221218114.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190821095952190.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-20T06:46:30.066Z">
+<meta property="og:updated_time" content="2019-10-26T03:00:04.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190816211431149.png">
   
@@ -249,8 +247,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- toc -->
+<a id="more"></a>
 
-<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）<br><strong>预编译的效果:</strong><br> <a id="more"></a></p>
+<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译指的是在函数执行之前系统会浏览一遍代码，对一些低级语法错误会报错，并且在这个过程中会产生程序执行的环境（比如变量声明提升，函数整体提升等）<br><strong>预编译的效果:</strong></p>
 <ul>
 <li><a id="yama">函数声明<strong>==整体==</strong>提升</a><blockquote>
 <p>预编译会将函数声明整体提升到函数调用之前。即使函数调用在前，声明在后代码也可正常执行。</p>
@@ -299,6 +298,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = 123;</span><br><span class="line">        </span><br><span class="line">        function tr()&#123;</span><br><span class="line">            console.log(a);</span><br><span class="line">            var a = 23;</span><br><span class="line">            console.log(a);</span><br><span class="line">            &#125;</span><br><span class="line">            tr();</span><br></pre></td></tr></table></figure>
 <p>【例2】以下代码先输出undefined，在输出200，300。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ad = 100;</span><br><span class="line">      function fb()&#123;</span><br><span class="line">          console.log(ad);</span><br><span class="line">          ad = 200;</span><br><span class="line">          console.log(ad);</span><br><span class="line">          var ad = 300;</span><br><span class="line">          console.log(ad);</span><br><span class="line">      &#125;</span><br><span class="line">      fb();</span><br><span class="line">      var ad;</span><br></pre></td></tr></table></figure>
+
 <h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>作用域是啥？</p>
 <blockquote>
 <p>作用域是根据名称查找变量的一套规则。负责收集并维护有所有声明的标识符（变量）组成的一系列查询，并实施一套严格规则，确定当前执行的代码对这些标识符的访问权限。</p>

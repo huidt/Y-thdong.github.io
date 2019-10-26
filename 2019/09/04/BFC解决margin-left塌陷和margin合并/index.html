@@ -10,18 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="margin-left塌陷html 1234&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;        &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;        &amp;lt;&#x2F;div&amp;gt;    &amp;lt;&#x2F;div&amp;gt;">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BFC解决margin-left塌陷和margin合并">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;09&#x2F;04&#x2F;BFC%E8%A7%A3%E5%86%B3margin-left%E5%A1%8C%E9%99%B7%E5%92%8Cmargin%E5%90%88%E5%B9%B6&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="margin-left塌陷html 1234&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;        &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;        &amp;lt;&#x2F;div&amp;gt;    &amp;lt;&#x2F;div&amp;gt;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190904222918767.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190904221938725.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190904225745143.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-18T14:16:05.724Z">
+<meta property="og:updated_time" content="2019-10-26T02:45:20.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190904222918767.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
   
@@ -249,37 +247,37 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- toc -->
-
-
+<a id="more"></a>
 <h3 id="margin-left塌陷"><a href="#margin-left塌陷" class="headerlink" title="margin-left塌陷"></a>margin-left塌陷</h3><p><strong>html</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+
 <p><strong>css</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.wrapper&#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-top: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: #000;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content&#123;</span><br><span class="line">    margin-left: 50px;</span><br><span class="line">    margin-top: 150px;				//注此处</span><br><span class="line">    width:50px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: #0f0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>此时设置 <code>margin-top: 150px;</code>我们发现子级盒子会带着父级盒子一起往下移动，好像二者粘连到了一起或者说子级盒子好像没有了“顶“。</p>
 <p>这种现象叫做<code>margin-left</code>塌陷，是经典BUG。</p>
 <p><strong>解决方法</strong></p>
-<p>1.</p>
 <blockquote>
-<p>在父级盒子添加<code>margin-top</code> ，就算是给子级盒子加了顶。</p>
+<p>1.在父级盒子添加<code>margin-top</code> ，就算是给子级盒子加了顶。</p>
 </blockquote>
-<p>2.</p>
 <blockquote>
-<p>使用BFC。全称为 块格式化上下文 (Block Formatting Context) 。常用于解决margin-left塌陷。</p>
+<p>2.使用BFC。全称为 块格式化上下文 (Block Formatting Context) 。常用于解决margin-left塌陷。</p>
 </blockquote>
 <p><strong>BFC触发方式</strong><br>在父级盒子中添加如下</p>
 <ul>
-        <li>position: absolute; </li>
-        <li>float: left; </li>
-        <li>display: inline-block; </li>
-        <li>overflow: hidden; </li>
-    </ul>
+    <li>position: absolute; </li>
+    <li>float: left; </li>
+    <li>display: inline-block; </li>
+    <li>overflow: hidden; </li>
+</ul>
 
 <p>==注==：<code>overflow: hidden;</code>注意溢出的部分会自动隐藏起来</p>
 <h3 id="margin合并"><a href="#margin合并" class="headerlink" title="margin合并"></a>margin合并</h3><p><strong>html</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;&lt;/div&gt;</span><br><span class="line">         &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
 <p><strong>css</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">    height: 20px;</span><br><span class="line">    background-color: #000;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">    margin-bottom: 200px;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content&#123;</span><br><span class="line">    height: 20px;</span><br><span class="line">    margin-top: 100px;</span><br><span class="line">    background-color: #0f0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">    height: 20px;</span><br><span class="line">    background-color: #000;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">    margin-bottom: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">    height: 20px;</span><br><span class="line">    margin-top: 100px;</span><br><span class="line">    background-color: #0f0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>问题</strong><br>此处 <code>margin-bottom: 200px;</code>、<code>margin-top: 100px;</code>会共用一块区域</p>
 <p><strong>解决</strong></p>
 <blockquote>
@@ -287,8 +285,10 @@
 </blockquote>
 <h3 id="浮动元素"><a href="#浮动元素" class="headerlink" title="浮动元素"></a>浮动元素</h3><p>浮动元素带有float的元素，最早用来实现类似于报纸图片环绕的布局<br><strong>html</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;1&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;2&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;3&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;1&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;2&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;3&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;1&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;2&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;3&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">    &lt;div class=&quot;sdf&quot;&gt;YAMA&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;sdff&quot;&gt;YAMA&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
 <p><strong>css</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.wrapper&#123;</span><br><span class="line">    width: 330px;</span><br><span class="line">    height: 320px;</span><br><span class="line">    border: 1px solid black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content&#123;</span><br><span class="line">    float: left;/*使元素站队*/</span><br><span class="line">    color: #fff;</span><br><span class="line">    margin-left: 10px;</span><br><span class="line">    margin-bottom: 10px;</span><br><span class="line">    background-color: black;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.sdf&#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: black;</span><br><span class="line">    color: aquamarine;</span><br><span class="line">    opacity: 0.5;</span><br><span class="line">&#125;</span><br><span class="line">.sdff&#123;</span><br><span class="line">    width: 150px;</span><br><span class="line">    height: 150px;</span><br><span class="line">    background-color: rgb(11, 47, 68);</span><br><span class="line">    color: aquamarine;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>效果如图</strong><br><img src="https://img-blog.csdnimg.cn/20190904222918767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>应用实例</strong><br><img src="https://img-blog.csdnimg.cn/20190904221938725.png" alt="在这里插入图片描述"></p>
 <blockquote>
 <p>此处我们注意到后面两个div好像具有层模型的特点，实际上不是<br>正确理解为：<br>浮动元素产生了浮动流，块级元素看不到所有产生了浮动流的元素<br>  ==注==  产生了BFC的元素、文本类属性的元素（带有inline属性）以及浮动元素都能看到浮动元素<br>（这里所指的看不到指的是在进行定位时会无视它而进行覆盖，就像层模型有些一样）<br>（还需注意，如果设置position和float后由内容决定大小，打内部把元素转换成inline-block）</p>

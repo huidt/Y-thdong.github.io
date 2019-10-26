@@ -10,15 +10,13 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="window对象BOM核心，指当前浏览器对象窗口所有JS全局对象、函数、变量均为window对象成员">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;11&#x2F;%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="window对象BOM核心，指当前浏览器对象窗口所有JS全局对象、函数、变量均为window对象成员">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-20T06:42:38.409Z">
+<meta property="og:updated_time" content="2019-10-26T02:56:59.804Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -245,9 +243,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!--toc-->
+<a id="more"></a>
 
-
-<h5 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h5><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<a id="more"></a><br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
+<h5 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h5><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
 <h5 id="window尺寸"><a href="#window尺寸" class="headerlink" title="window尺寸"></a>window尺寸</h5><p>window.innerWidth 浏览器窗口内部高度(不包含滚动条)<br>window.innerHeight</p>
 <h5 id="window方法"><a href="#window方法" class="headerlink" title="window方法"></a>window方法</h5><p>window.open(); 打开新窗口（一般会被浏览器拦截）<br>window.close(); 关闭当前窗口</p>
 <h5 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h5><p>（1）setInterval有固定的时间延迟循环调用函数<br>        对应clearInterval(nIntervId);要取消的定时器的 ID。是由 setInterval() 返回的。<br>        值得一提的是，所用的ID池setInterval()和setTimeout()共享，<br>        这意味着你可以在技术上使用clearInterval()和clearTimeout()互换。<br>        但是，为清楚起见，应避免这样做。<br>（2）setTimeout在定时器到期后执行一个函数或指定的一段代码<br>        对应scope.clearTimeout(timeoutID)<br>        您要取消的超时的标识符。此ID是通过对的相应调用返回的setTimeout()。<br>        值得一提的是ID的池使用setTimeout()和setInterval()共享，<br>        这意味着你可以在技术上使用clearTimeout()和clearInterval()互换。<br>        但是，为清楚起见，应避免这样做。</p>
@@ -255,7 +253,7 @@
 <h5 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h5><p>用于获取当前页面的地址（URL），并把浏览器重新定向到新的页面。<br>    属性：<br>        （1）location.hostname返回web主机域名<br>        （2）location.pathname返回档期那文件的路径和文件名<br>        （3）location.port返回web主机端口<br>        （4）location.protocol返回所使用的web协议（http或https）<br>        （5）location.href返回当前页面的url<br>        （6）location.assign()加载新的文档</p>
 <h5 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h5><p> window.screen对象包含有关用户屏幕的信息<br>    属性：<br>        （1）screen.availHeight可用屏幕高度<br>        （2）screen.availWidth可用屏幕宽度<br>        （3）screen.Height屏幕高度<br>        （4）screen.Width屏幕宽度</p>
 <h5 id="认识面向对象"><a href="#认识面向对象" class="headerlink" title="认识面向对象"></a>认识面向对象</h5><p> 概念：<br>        （1）一切事物皆对象<br>        （2）对象具有封装性和继承特性<br>        （3）信息隐藏<br>    创建：<br>        （1）直接命名赋值<br>        （2）函数构造器</p>
-<h5 id="深入了解面向对象"><a href="#深入了解面向对象" class="headerlink" title="深入了解面向对象"></a>深入了解面向对象</h5><p> JS中不存在类的概念，但可以使用function模拟类<br>    注意原型链prototype的使用，以及类套类+（立即执行函数）闭包实现封装<br>    prototype 属性使您有能力向对象添加属性和方法<br>    封装之后可以使用window赋值向外部提供一个引用的接口<br>    不管方法还是属性直接赋值就可以 里：window.person = person;</p>
+<h5 id="深入了解面向对象"><a href="#深入了解面向对象" class="headerlink" title="深入了解面向对象"></a>深入了解面向对象</h5><p> JS中不存在类的概念，但可以使用function模拟类<br>    注意原型链prototype的使用，以及类套类+（立即执行函数）闭包实现封装<br>    prototype 属性使您有能力向对象添加属性和方法<br>    封装之后可以使用window赋值向外部提供一个引用的接口<br>    不管方法还是属性直接赋值就可以 例：<code>window.person = person;</code></p>
 
     
 

@@ -10,16 +10,14 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1.行级元素（inline&#x2F;内联）">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css三大类元素">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;09&#x2F;01&#x2F;css%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%85%83%E7%B4%A0&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="1.行级元素（inline&#x2F;内联）">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190901095504193.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center">
-<meta property="og:updated_time" content="2019-10-20T06:45:53.640Z">
+<meta property="og:updated_time" content="2019-10-26T03:01:12.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190901095504193.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center">
   
@@ -247,26 +245,33 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- toc -->
+<a id="more"></a>
+<h4 id="1-行级元素（inline-内联）"><a href="#1-行级元素（inline-内联）" class="headerlink" title="1.行级元素（inline/内联）"></a>1.行级元素（inline/内联）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feature:</span><br><span class="line">       内容决定元素所占位置</span><br><span class="line">       不可通过CSS改变宽高</span><br><span class="line">       &lt;span&gt;&lt;/span&gt;</span><br><span class="line">       &lt;strong&gt;&lt;/strong&gt;</span><br><span class="line">       &lt;em&gt;&lt;/em&gt;</span><br><span class="line">       &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">       &lt;del&gt;&lt;/del&gt;</span><br></pre></td></tr></table></figure>
 
-<h4 id="1-行级元素（inline-内联）"><a href="#1-行级元素（inline-内联）" class="headerlink" title="1.行级元素（inline/内联）"></a>1.行级元素（inline/内联）</h4><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feature:</span><br><span class="line">       内容决定元素所占位置</span><br><span class="line">       不可通过CSS改变宽高</span><br><span class="line">       &lt;span&gt;&lt;/span&gt;</span><br><span class="line">       &lt;strong&gt;&lt;/strong&gt;</span><br><span class="line">       &lt;em&gt;&lt;/em&gt;</span><br><span class="line">       &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">       &lt;del&gt;&lt;/del&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>例：span strong em a del </p>
 </blockquote>
 <h4 id="2-块级元素（block）"><a href="#2-块级元素（block）" class="headerlink" title="2.块级元素（block）"></a>2.块级元素（block）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">feature:</span><br><span class="line">      独占一行</span><br><span class="line">      可以通过CSS改变宽高</span><br><span class="line">      &lt;div&gt;&lt;/div&gt;</span><br><span class="line">      &lt;p&gt;&lt;/p&gt;</span><br><span class="line">      &lt;ul&gt;&lt;/ul&gt;</span><br><span class="line">      &lt;li&gt;&lt;/li&gt;</span><br><span class="line">      &lt;ol&gt;&lt;/ol&gt;</span><br><span class="line">      &lt;form action=&quot;&quot;&gt;&lt;/form&gt;</span><br><span class="line">      &lt;address&gt;&lt;/address&gt;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>例：div li ol ul p form address</p>
 </blockquote>
 <h4 id="3-行级块元素（inline-block）"><a href="#3-行级块元素（inline-block）" class="headerlink" title="3.行级块元素（inline-block）"></a>3.行级块元素（inline-block）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">feature:</span><br><span class="line">    内容决定大小</span><br><span class="line">    不必同时设置宽高，会等比缩放</span><br><span class="line">    不独占一行</span><br><span class="line">    可以改变宽高</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>例：img</p>
 </blockquote>
-<p>注：<br>        凡是带有inline的都具有文字特性<br>        当4张图片并排展示时；中间会有空格（见JS词法分析）<br>        此处处理空格时虽然可以使用margin，但是不建议，<br>        最好把img标签不换行写在一起就可以</p>
+<p>注：</p>
+<ul>
+<li>凡是带有inline的都具有文字特性</li>
+<li>当4张图片并排展示时；中间会有空格（见JS词法分析）。</li>
+<li>此处处理空格时虽然可以使用margin，但是不建议，最好把img标签不换行写在一起就可以</li>
+</ul>
 <blockquote>
 <p>原因：因为在向服务器上传代码是会进行压缩，<br>        系统会自动删掉空格，之后再往浏览器上显示时<br>        会呈现负边框的效果</p>
 </blockquote>
-<p>附：<br>    开发对于重复性高的元素，往往先定义CSS功能，再选配组合<br>    通配符常用来初始化标签，因为标签常常带有开发者不需要的东西</p>
-<h4 id="盒子模型："><a href="#盒子模型：" class="headerlink" title="盒子模型："></a>盒子模型：</h4><p>组成部分：<br>1.盒子壁 border<br>2.内边距 padding<br> 3.盒内容 width+height<br> margin+border+padding+content(=width+height)</p>
+<p>附：开发对于重复性高的元素，往往先定义CSS功能，再选配组合；通配符常用来初始化标签，因为标签常常带有开发者不需要的东西。</p>
+<h4 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h4><p>组成部分：<br>1.盒子壁 border<br>2.内边距 padding<br> 3.盒内容 width+height<br> margin+border+padding+content(=width+height)</p>
 <blockquote>
 <p>padding:100px,150px,100px;其中150px代表左右方向<br>padding: 10px 60px;分别代表上下左右</p>
 </blockquote>
@@ -464,7 +469,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-行级元素（inline-内联）"><span class="toc-number">1.</span> <span class="toc-text">1.行级元素（inline/内联）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-块级元素（block）"><span class="toc-number">2.</span> <span class="toc-text">2.块级元素（block）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-行级块元素（inline-block）"><span class="toc-number">3.</span> <span class="toc-text">3.行级块元素（inline-block）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#盒子模型："><span class="toc-number">4.</span> <span class="toc-text">盒子模型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#层模型"><span class="toc-number">5.</span> <span class="toc-text">层模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#伪类选择器"><span class="toc-number">6.</span> <span class="toc-text">伪类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#附：广告定位"><span class="toc-number">7.</span> <span class="toc-text">附：广告定位</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-行级元素（inline-内联）"><span class="toc-number">1.</span> <span class="toc-text">1.行级元素（inline/内联）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-块级元素（block）"><span class="toc-number">2.</span> <span class="toc-text">2.块级元素（block）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-行级块元素（inline-block）"><span class="toc-number">3.</span> <span class="toc-text">3.行级块元素（inline-block）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#盒子模型"><span class="toc-number">4.</span> <span class="toc-text">盒子模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#层模型"><span class="toc-number">5.</span> <span class="toc-text">层模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#伪类选择器"><span class="toc-number">6.</span> <span class="toc-text">伪类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#附：广告定位"><span class="toc-number">7.</span> <span class="toc-text">附：广告定位</span></a></li></ol>
                     </div>
                 </span>
             </div>
