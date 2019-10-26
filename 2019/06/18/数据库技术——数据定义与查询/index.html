@@ -10,13 +10,11 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="最近搭建了个人网站YAMA的个人网站（论坛内容建设ing）已废弃 以下是数据库查询的例表，sno为学号，cno为课程号，sdept为系名，cpno为先修课程，ccredit为学分。  数据定义 注：格式文中出现的[…]代表可省略  1、模式的定义与删除a、定义模式create schema &amp;lt;模式名&amp;gt; authorization &amp;lt;用户名&amp;gt;;要创建模式，调用该命令的用户">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库技术——数据定义与查询">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;06&#x2F;18&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9F%A5%E8%AF%A2&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="最近搭建了个人网站YAMA的个人网站（论坛内容建设ing）已废弃 以下是数据库查询的例表，sno为学号，cno为课程号，sdept为系名，cpno为先修课程，ccredit为学分。  数据定义 注：格式文中出现的[…]代表可省略  1、模式的定义与删除a、定义模式create schema &amp;lt;模式名&amp;gt; authorization &amp;lt;用户名&amp;gt;;要创建模式，调用该命令的用户">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190615212108624.PNG?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190615212108624.PNG?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center">
@@ -30,7 +28,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190619225753539.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190629002748134.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190629004210662.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-26T02:55:09.368Z">
+<meta property="og:updated_time" content="2019-10-26T03:08:31.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190615212108624.PNG?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center">
   
@@ -257,8 +255,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<!-- toc -->
+    <!-- toc -->
+<a id="more"></a>
 <p>最近搭建了个人网站<a href="http://www.yama.gz.cn/" target="_blank" rel="noopener">YAMA的个人网站<del>（论坛内容建设ing）</del><sub>已废弃</sub></a></p>
 <p>以下是数据库查询的例表，sno为学号，cno为课程号，sdept为系名，cpno为先修课程，ccredit为学分。<br><img src="https://img-blog.csdnimg.cn/20190615212108624.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190615212108624.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190615212120925.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20190615212134720.PNG#pic_center" alt="&lt;div align=center&gt;&lt;img src=&quot;&quot; width=&quot;50%&quot; height=&quot;%50&quot;&gt;"></p>
