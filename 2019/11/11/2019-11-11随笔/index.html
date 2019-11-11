@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Y-thdong">
-  <title>JS笔记 | Thdong</title>
+  <title>2019.11.11随笔 | Thdong</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScript、HondaCBR650R">
+  <meta name="description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
+<meta name="keywords" content="JavaScript、HondaCBR650R">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS笔记">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;11&#x2F;JS%E7%AC%94%E8%AE%B0&#x2F;index.html">
+<meta property="og:title" content="2019.11.11随笔">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;11&#x2F;11&#x2F;2019-11-11%E9%9A%8F%E7%AC%94&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
+<meta property="og:description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T14:36:06.522Z">
+<meta property="og:updated_time" content="2019-11-11T14:50:00.139Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -189,14 +191,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2019-11-11随笔" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      JS笔记
+      2019.11.11随笔
     </h1>
   
 
@@ -208,8 +210,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/10/11/JS%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-10-11T15:47:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+<a href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/" class="archive-article-date">
+        <time datetime="2019-11-11T14:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
 </a>
 
   
@@ -222,7 +224,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.3k字</span>
+      <span class="post-count">0字</span>
     </span>
   </span>
 
@@ -231,7 +233,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -242,42 +244,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <!--toc-->
-<a id="more"></a>
-
-<h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
-<h2 id="window尺寸"><a href="#window尺寸" class="headerlink" title="window尺寸"></a>window尺寸</h2><p>window.innerWidth 浏览器窗口内部高度(不包含滚动条)<br>window.innerHeight</p>
-<h2 id="window方法"><a href="#window方法" class="headerlink" title="window方法"></a>window方法</h2><p>window.open(); 打开新窗口（一般会被浏览器拦截）<br>window.close(); 关闭当前窗口</p>
-<h2 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h2><p>（1）setInterval有固定的时间延迟循环调用函数<br>        对应clearInterval(nIntervId);要取消的定时器的 ID。是由 setInterval() 返回的。<br>        值得一提的是，所用的ID池setInterval()和setTimeout()共享，<br>        这意味着你可以在技术上使用clearInterval()和clearTimeout()互换。<br>        但是，为清楚起见，应避免这样做。<br>（2）setTimeout在定时器到期后执行一个函数或指定的一段代码<br>        对应scope.clearTimeout(timeoutID)<br>        您要取消的超时的标识符。此ID是通过对的相应调用返回的setTimeout()。<br>        值得一提的是ID的池使用setTimeout()和setInterval()共享，<br>        这意味着你可以在技术上使用clearTimeout()和clearInterval()互换。<br>        但是，为清楚起见，应避免这样做。</p>
-<h2 id="History对象"><a href="#History对象" class="headerlink" title="History对象"></a>History对象</h2><p>window.history对象包含浏览器的历史（url）的集合<br>    方法：<br>        （1）history.back();<br>        （2）history.forward();<br>        （3）history.go();  </p>
-<h2 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h2><p>用于获取当前页面的地址（URL），并把浏览器重新定向到新的页面。<br>    属性：<br>        （1）location.hostname返回web主机域名<br>        （2）location.pathname返回档期那文件的路径和文件名<br>        （3）location.port返回web主机端口<br>        （4）location.protocol返回所使用的web协议（http或https）<br>        （5）location.href返回当前页面的url<br>        （6）location.assign()加载新的文档  </p>
-<h2 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h2><p> window.screen对象包含有关用户屏幕的信息<br>    属性：<br>        （1）screen.availHeight可用屏幕高度<br>        （2）screen.availWidth可用屏幕宽度<br>        （3）screen.Height屏幕高度<br>        （4）screen.Width屏幕宽度  </p>
-<h2 id="认识面向对象"><a href="#认识面向对象" class="headerlink" title="认识面向对象"></a>认识面向对象</h2><p> 概念：<br>        （1）一切事物皆对象<br>        （2）对象具有封装性和继承特性<br>        （3）信息隐藏<br>    创建：<br>        （1）直接命名赋值<br>        （2）函数构造器  </p>
-<h2 id="深入了解面向对象"><a href="#深入了解面向对象" class="headerlink" title="深入了解面向对象"></a>深入了解面向对象</h2><p> JS中不存在类的概念，但可以使用function模拟类<br>    注意原型链prototype的使用，以及类套类+（立即执行函数）闭包实现封装<br>    prototype 属性使您有能力向对象添加属性和方法<br>    封装之后可以使用window赋值向外部提供一个引用的接口<br>    不管方法还是属性直接赋值就可以 例：<code>window.person = person;</code></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>熟练使用对象属性的增、删、改、查</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">move.sleep = &quot;Yes&quot;</span><br><span class="line">delete move.sleep</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>对象的创建方法<br>第一种：直接写<code>var objectname = {}</code><br>第二种：构造函数，又分为系统自带的构造函数或者自己写的构造函数（自己写的构造函数和函数结构上完全一样，使用new生成）（附：构造函数的写法虽然没有规定，但尽量单词的第一个字母大写，和普通函数区分开来）</li>
-</ol>
-<blockquote>
-<p>比如Object()、Array()、Number()这些属于系统的构造函数，（<em>此处注意因为PHP中没有双引号，所以在新建对象字符串赋值时尽量使用单引号</em>）</p>
-</blockquote>
-<ol start="3">
-<li>构造函数会自动的隐式地返回值，但是也可以自己写一个return，自己写的可能会破环系统隐式返回的，但如果自己写的返回值是原始值（原始值指的是存储在栈中的简单数据段，也就是说它们的值直接存储在变量访问的位置，比如数字、字符串。详见<a href="https://www.w3school.com.cn/js/pro_js_value.asp" target="_blank" rel="noopener">W3C原始值解释</a>）的话则不行，还是会返回系统默认的。  </li>
-</ol>
-<p><strong>附加</strong>：此处其实和函数赋值给变量很像，但因为有了new，则规定自己写的返回值只能是对象，很明显数字、字符串这些都不是对象，所以这也是对象中返回原始值并不会破环系统隐式返回的原因的另一种理解。 </p>
-<ol start="4">
-<li><p>针对第四点讲到的原始值，非常灵活，值得注意的是并不是所有的数字都是原始值，比如<code>var num = new Number(123);</code>，此时num仍然是数字，但他是一个对象数字，它具有对象的增删查改操作。不过一旦它经过一次数学运算它就变为了普通的数字。<br>附加：假如返回Boolean、null、undefined也不会破环隐式的返回值，但是Bollean和另外两个不同，它是由和数字这些一样，它是有构造函数的，它可以变成一个对象布尔值，加一个new它也会破环隐式返回值，总之原始值是不可能有属性和方法的。<br><del>这么理解null、undefined也就自然不能有自己的属性和方法。</del><br>不过有了包装类，情况就变了，详见下面</p>
-</li>
-<li><p>包装类  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;yyyyy&quot;;</span><br><span class="line">console.log(str.length);//5</span><br><span class="line">str.length = 2;</span><br><span class="line">console.log(str.length);//5</span><br></pre></td></tr></table></figure>
-<p>按道理来说原始值没有属性和方法，但是当调用<code>str.length</code>时系统会<br><code>new String(&quot;yyyyy&quot;).length = 2;  delete</code>，此时我们使用的就是String对象的length，使用完毕后当前创建的会立马销毁，下次使用再创建新的。  </p>
-</li>
-</ol>
-
+    
     
 
     
@@ -313,7 +280,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/Y-thdong/2019/10/11/JS笔记/" title="JS笔记" target="_blank">https://github.com/Y-thdong/2019/10/11/JS笔记/</a>
+          <a href="https://github.com/Y-thdong/2019/11/11/2019-11-11随笔/" title="2019.11.11随笔" target="_blank">https://github.com/Y-thdong/2019/11/11/2019-11-11随笔/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -377,7 +344,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2019/10/11/JS%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -392,18 +359,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/10/19/Markdown%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Markdown语法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/11/ArcSDE-10-1%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E8%BF%9E%E6%8E%A5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ArcSDE 10.1安装、配置、连接</div>
+    <a href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微电子复习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -430,7 +388,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#window对象"><span class="toc-number">1.</span> <span class="toc-text">window对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#window尺寸"><span class="toc-number">2.</span> <span class="toc-text">window尺寸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#window方法"><span class="toc-number">3.</span> <span class="toc-text">window方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计时器"><span class="toc-number">4.</span> <span class="toc-text">计时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#History对象"><span class="toc-number">5.</span> <span class="toc-text">History对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Location对象"><span class="toc-number">6.</span> <span class="toc-text">Location对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#screen对象"><span class="toc-number">7.</span> <span class="toc-text">screen对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识面向对象"><span class="toc-number">8.</span> <span class="toc-text">认识面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解面向对象"><span class="toc-number">9.</span> <span class="toc-text">深入了解面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">10.</span> <span class="toc-text">总结</span></a></li></ol>
+                    Nothing
                     </div>
                 </span>
             </div>
@@ -443,7 +401,7 @@
 
 
 
-<div id="SOHUCS" sid="JS笔记" ></div> 
+<div id="SOHUCS" sid="2019-11-11随笔" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
