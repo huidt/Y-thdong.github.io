@@ -16,11 +16,12 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;11&#x2F;29&#x2F;Android%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;11&#x2F;29&#x2F;Android%E7%AC%94%E8%AE%B0&#x2F;%E6%8D%95%E8%8E%B71.PNG">
-<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;11&#x2F;29&#x2F;Android%E7%AC%94%E8%AE%B0&#x2F;activity_lifecycle.png">
-<meta property="og:updated_time" content="2019-11-29T14:53:28.262Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;activitylife.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG">
+<meta property="og:updated_time" content="2019-11-29T15:13:24.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;11&#x2F;29&#x2F;Android%E7%AC%94%E8%AE%B0&#x2F;%E6%8D%95%E8%8E%B71.PNG">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
   
@@ -274,7 +275,7 @@
 <li><code>&lt;corners android:topLeftRadius=&quot;10px&quot;...&gt;</code> 这个是设置圆角的  </li>
 <li><code>&lt;gradient&gt;</code> 这个是设置渐变色的,可选属性有: startColor:起始颜色 endColor:结束颜色 centerColor:中间颜色 angle:方向角度,等于0时,从左到右,然后逆时针方向转,当angle = 90度时从下往上   type:设置渐变的类型  </li>
 <li>horizontally→水平  </li>
-<li>vertically→垂直<br><img src="%E6%8D%95%E8%8E%B71.PNG" alt=""><br><a href="https://www.runoob.com/w3cnote/android-tutorial-textview.html" target="_blank" rel="noopener">点击查看教程</a></li>
+<li>vertically→垂直<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG" alt=""><br><a href="https://www.runoob.com/w3cnote/android-tutorial-textview.html" target="_blank" rel="noopener">点击查看教程</a></li>
 </ul>
 <p>在开发中要学会使用辅助线，因为不同的设备运行效果可能有所不同，辅助线可以按照百分比划分尺寸，可以有效解决某些显示相关问题  </p>
 <h2 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h2><p>Android系统四大组件分别是活动（Activity）、服务（Service）、广播接收器（Broadcast<br>Receiver）和内容提供器（Content Provider）。其中活动是所有Android应用程序的门面，凡<br>是在应用中你看得到的东西，都是放在活动中的。而服务就比较低调了，你无法看到它，<br>但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。广播<br>接收器允许你的应用接收来自各处的广播消息，比如电话、短信等，当然你的应用同样也<br>可以向外发出广播消息。内容提供器则为应用程序之间共享数据提供了可能，比如你想要<br>读取系统电话簿中的联系人，就需要通过内容提供器来实现。</p>
@@ -345,7 +346,7 @@
 <li>下来还剩一个dependencies闭包。这个闭包的功能非常强大，它可以指定当前项目所有的依赖关系。通常Android Studio项目一共有3种依赖方式：本地依赖、库依赖和远程依赖。本地依赖可以对本地的Jar包或目录添加依赖关系，库依赖可以对项目中的库模块添加依赖关系，远程依赖则可以对jcenter库上的开源项目添加依赖关系。观察一下dependencies闭包中的配置，第一行的compile fileTree就是一个本地依赖声明，它表示将libs目录下所有.jar后缀的文件都添加到项目的构建路径当中。而第二行的compile则是远程依赖声明，com.android.support:appcompat-v7:24.2.1就是一个标准的远程依赖库格式，其中com.android.support是域名部分，用于和其他公司的库做区分；appcompat-v7是组名称，用于和同一个公司中不同的库做区分；24.2.1是版本号，用于和同一个库不同的版本做区分。加上这句声明后，Gradle在构建项目时会首先检查一下本地是否已经有这个库的缓存，如果没有的话则会去自动联网下载，然后再添加到项目的构建路径当中。至于库依赖声明这里没有用到，它的基本格式是compile project后面加上要依赖的库名称，比如说有一个库模块的名字叫helper，那么添加这个库的依赖关系只需要加入compileproject(‘:helper’)这句声明即可。另外剩下的一句testCompile是用于声明测试用例库的，这个我们暂时用不到，先忽略它就可以了。</li>
 </ul>
 <h2 id="Android程序的逻辑和视图分离"><a href="#Android程序的逻辑和视图分离" class="headerlink" title="Android程序的逻辑和视图分离"></a>Android程序的逻辑和视图分离</h2><p>不推荐在活动中直接编写界面的，更加通用的一种做法是，在布局文件中编写界面，然后在活动中引入进来。可以看到，在onCreate()方法的第二行调用了setContentView()方法，就是这个方法给当前的活动引入了一个hello_world_layout布局。<br>比如对于字符串资源我们一般都写到<code>strings.xml</code>中，而不是直接写到函数里面  </p>
-<h2 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h2><p>我的理解：在由当前视图切换到另一视图时，当前Activity会onPause→onStop<br>当切换回来会onRestart→onStart→onResume:<br><img src="activity_lifecycle.png" alt=""></p>
+<h2 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h2><p>我的理解：在由当前视图切换到另一视图时，当前Activity会onPause→onStop<br>当切换回来会onRestart→onStart→onResume:<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/activitylife.png" alt=""><br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG" alt=""></p>
 
     
 
