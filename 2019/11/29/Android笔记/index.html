@@ -17,9 +17,12 @@
 <meta property="og:site_name" content="Thdong">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat1.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat2.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat3.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;activitylife.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG">
-<meta property="og:updated_time" content="2019-11-29T15:13:24.808Z">
+<meta property="og:updated_time" content="2019-11-30T02:43:38.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG">
   
@@ -226,7 +229,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">4.9k字</span>
+      <span class="post-count">5.6k字</span>
     </span>
   </span>
 
@@ -235,7 +238,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">18分</span>
+      <span class="post-count">21分</span>
     </span>
   </span>
 </div>
@@ -248,6 +251,9 @@
     
     <!--toc-->
 <a id="more"></a>
+<blockquote>
+<p>声明：本文为个人学习笔记，内容大多来自<a href="https://www.bilibili.com/video/av50954019" target="_blank" rel="noopener">哔哩哔哩视频</a>和《第一行代码》,如有侵权请联系E-mail:<a href="mailto:2480227471@qq.com" target="_blank" rel="noopener">YAMA</a></p>
+</blockquote>
 <h2 id="常见单位"><a href="#常见单位" class="headerlink" title="常见单位"></a>常见单位</h2><p>dip（同dp）:(density independence pixel)设备独立像素，不同设备有不同的显示效果，这一般，不依赖像素<br>px: pixels不同设备显示效果相同<br>pt: point，是一个标准的长度单位，1pt＝1/72英寸，用于印刷业，非常简单易用<br>sp: scaled pixels(缩放像素). 主要用于字体显示best for textsize。</p>
 <h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    tools:context=&quot;.MainActivity&quot;</span><br><span class="line">    android:gravity=&quot;center&quot;</span><br><span class="line">    android:background=&quot;#8fffad&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id=&quot;@+id/txtOne&quot;</span><br><span class="line">        android:layout_width=&quot;200dp&quot;</span><br><span class="line">        android:layout_height=&quot;200dp&quot;</span><br><span class="line">        android:gravity=&quot;center&quot;</span><br><span class="line">        android:text=&quot;TextView(显示框)&quot;</span><br><span class="line">        android:textColor=&quot;#EA5246&quot;</span><br><span class="line">        android:textStyle=&quot;bold|italic&quot;</span><br><span class="line">        android:background=&quot;#000000&quot;</span><br><span class="line">        android:textSize=&quot;18sp&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
 
@@ -344,6 +350,14 @@
 </ol>
 </li>
 <li>下来还剩一个dependencies闭包。这个闭包的功能非常强大，它可以指定当前项目所有的依赖关系。通常Android Studio项目一共有3种依赖方式：本地依赖、库依赖和远程依赖。本地依赖可以对本地的Jar包或目录添加依赖关系，库依赖可以对项目中的库模块添加依赖关系，远程依赖则可以对jcenter库上的开源项目添加依赖关系。观察一下dependencies闭包中的配置，第一行的compile fileTree就是一个本地依赖声明，它表示将libs目录下所有.jar后缀的文件都添加到项目的构建路径当中。而第二行的compile则是远程依赖声明，com.android.support:appcompat-v7:24.2.1就是一个标准的远程依赖库格式，其中com.android.support是域名部分，用于和其他公司的库做区分；appcompat-v7是组名称，用于和同一个公司中不同的库做区分；24.2.1是版本号，用于和同一个库不同的版本做区分。加上这句声明后，Gradle在构建项目时会首先检查一下本地是否已经有这个库的缓存，如果没有的话则会去自动联网下载，然后再添加到项目的构建路径当中。至于库依赖声明这里没有用到，它的基本格式是compile project后面加上要依赖的库名称，比如说有一个库模块的名字叫helper，那么添加这个库的依赖关系只需要加入compileproject(‘:helper’)这句声明即可。另外剩下的一句testCompile是用于声明测试用例库的，这个我们暂时用不到，先忽略它就可以了。</li>
+</ul>
+<h2 id="Logcat→日志猫的使用"><a href="#Logcat→日志猫的使用" class="headerlink" title="Logcat→日志猫的使用"></a>Logcat→日志猫的使用</h2><ul>
+<li>Log.v()。用于打印那些最为琐碎的、意义最小的日志信息。对应级别verbose，是Android日志里面级别最低的一种。</li>
+<li>Log.d()。用于打印一些调试信息，这些信息对你调试程序和分析问题应该是有帮助的。对应级别debug，比verbose高一级。</li>
+<li>Log.i()。用于打印一些比较重要的数据，这些数据应该是你非常想看到的、可以帮你分析用户行为数据。对应级别info，比debug高一级。</li>
+<li>Log.w()。用于打印一些警告信息，提示程序在这个地方可能会有潜在的风险，最好去修复一下这些出现警告的地方。对应级别warn，比info高一级。</li>
+<li>Log.e()。用于打印程序中的错误信息，比如程序进入到了catch语句当中。当有错误信息打印出来的时候，一般都代表你的程序出现严重问题了，必须尽快修复。对应级别error，比warn高一级。<br>一共就5个方法，当然每个方法还会有不同的重载<br>比如<code>Log.d(TAG, &quot;onCreate: &quot;);</code><br>TAG可以是自己定义的String变量，一般传入当前的类名就好，主要用于对打印信息进行过滤；第二个参数是要打印的具体内容。在logcat中查看：打印日志的内容和tag名，就连程序的包名、打印的时间以及应用程序的进程号都可以看到<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2019-11-30 10:08:27.714 26181-26181/com.example.hello_world V/mytag: onResume: </span><br><span class="line">2019-11-30 10:08:27.813 26181-26181/com.example.hello_world D/mytag: onPause:</span><br></pre></td></tr></table></figure>
+对于输出信息我想到的是Java的<code>System.out</code>，不过在此处和log比起来，它明显不能胜任，比如日志打印不可控制、打印时间无法确定、不能添加过滤器、日志没有级别区分，log恰好弥补了这些缺点，同时在Android Studio输入log+？按回车便可快捷输入十分方便。如果在onCreate()方法的外面输入logt，回车，这时就会以当前的类名作为值自动生成一个TAG常量，贼方便。<br>在底部工具栏我们可以自己设置一个过滤器，如图其中data就是自己定义的<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat1.PNG" alt=""><br>同时可以在选择日志级别，日志级别控制的好处就是，你可以很快地找到你所关心的那些日志。比如而现在你只需要将日志级别选中为error，那些不相干的琐碎信息就不会再干扰你的视线<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat2.PNG" alt=""><br>还可以设置关键字过滤 <em>(支持正则表达式)</em><br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat3.PNG" alt="">  </li>
 </ul>
 <h2 id="Android程序的逻辑和视图分离"><a href="#Android程序的逻辑和视图分离" class="headerlink" title="Android程序的逻辑和视图分离"></a>Android程序的逻辑和视图分离</h2><p>不推荐在活动中直接编写界面的，更加通用的一种做法是，在布局文件中编写界面，然后在活动中引入进来。可以看到，在onCreate()方法的第二行调用了setContentView()方法，就是这个方法给当前的活动引入了一个hello_world_layout布局。<br>比如对于字符串资源我们一般都写到<code>strings.xml</code>中，而不是直接写到函数里面  </p>
 <h2 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h2><p>我的理解：在由当前视图切换到另一视图时，当前Activity会onPause→onStop<br>当切换回来会onRestart→onStart→onResume:<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/activitylife.png" alt=""><br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG" alt=""></p>
@@ -491,7 +505,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见单位"><span class="toc-number">1.</span> <span class="toc-text">常见单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-number">2.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四大组件"><span class="toc-number">3.</span> <span class="toc-text">四大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project项目结构"><span class="toc-number">4.</span> <span class="toc-text">Project项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app目录结构"><span class="toc-number">5.</span> <span class="toc-text">app目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res目录结构"><span class="toc-number">6.</span> <span class="toc-text">res目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Androidmanifest-xml文件"><span class="toc-number">7.</span> <span class="toc-text">Androidmanifest.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#build-gradle文件"><span class="toc-number">8.</span> <span class="toc-text">build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app下的build-gradle文件"><span class="toc-number">9.</span> <span class="toc-text">app下的build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android程序的逻辑和视图分离"><span class="toc-number">10.</span> <span class="toc-text">Android程序的逻辑和视图分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">11.</span> <span class="toc-text">Activity生命周期</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见单位"><span class="toc-number">1.</span> <span class="toc-text">常见单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-number">2.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四大组件"><span class="toc-number">3.</span> <span class="toc-text">四大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project项目结构"><span class="toc-number">4.</span> <span class="toc-text">Project项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app目录结构"><span class="toc-number">5.</span> <span class="toc-text">app目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res目录结构"><span class="toc-number">6.</span> <span class="toc-text">res目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Androidmanifest-xml文件"><span class="toc-number">7.</span> <span class="toc-text">Androidmanifest.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#build-gradle文件"><span class="toc-number">8.</span> <span class="toc-text">build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app下的build-gradle文件"><span class="toc-number">9.</span> <span class="toc-text">app下的build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logcat→日志猫的使用"><span class="toc-number">10.</span> <span class="toc-text">Logcat→日志猫的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android程序的逻辑和视图分离"><span class="toc-number">11.</span> <span class="toc-text">Android程序的逻辑和视图分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">12.</span> <span class="toc-text">Activity生命周期</span></a></li></ol>
                     </div>
                 </span>
             </div>
