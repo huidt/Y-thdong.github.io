@@ -20,9 +20,10 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat1.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat2.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;logcat3.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;android%E7%BB%84%E4%BB%B6.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;activitylife.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG">
-<meta property="og:updated_time" content="2019-11-30T02:46:36.561Z">
+<meta property="og:updated_time" content="2019-12-02T14:46:27.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;www.yama.gz.cn&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE&#x2F;%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A32.PNG">
   
@@ -229,7 +230,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">5.6k字</span>
+      <span class="post-count">6.8k字</span>
     </span>
   </span>
 
@@ -238,7 +239,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">21分</span>
+      <span class="post-count">25分</span>
     </span>
   </span>
 </div>
@@ -360,6 +361,26 @@
 对于输出信息我想到的是Java的<code>System.out</code>，不过在此处和log比起来，它明显不能胜任，比如日志打印不可控制、打印时间无法确定、不能添加过滤器、日志没有级别区分，log恰好弥补了这些缺点，同时在Android Studio输入log+？按回车便可快捷输入十分方便。如果在onCreate()方法的外面输入logt，回车，这时就会以当前的类名作为值自动生成一个TAG常量，贼方便。<br>在底部工具栏我们可以自己设置一个过滤器，如图其中data就是自己定义的<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat1.PNG" alt=""><br>同时可以在选择日志级别，日志级别控制的好处就是，你可以很快地找到你所关心的那些日志。比如而现在你只需要将日志级别选中为error，那些不相干的琐碎信息就不会再干扰你的视线<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat2.PNG" alt=""><br>还可以设置关键字过滤 <em>(支持正则表达式)</em><br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/logcat3.PNG" alt="">  </li>
 </ul>
 <h2 id="Android程序的逻辑和视图分离"><a href="#Android程序的逻辑和视图分离" class="headerlink" title="Android程序的逻辑和视图分离"></a>Android程序的逻辑和视图分离</h2><p>不推荐在活动中直接编写界面的，更加通用的一种做法是，在布局文件中编写界面，然后在活动中引入进来。可以看到，在onCreate()方法的第二行调用了setContentView()方法，就是这个方法给当前的活动引入了一个hello_world_layout布局。<br>比如对于字符串资源我们一般都写到<code>strings.xml</code>中，而不是直接写到函数里面  </p>
+<h2 id="Android四大组件"><a href="#Android四大组件" class="headerlink" title="Android四大组件"></a>Android四大组件</h2><p>图片源自<a href="https://developer.android.google.cn/guide/platform/images/android-stack_2x.png" target="_blank" rel="noopener">https://developer.android.google.cn/guide/platform</a>,在《第一行代码中》也有讲到这点。不过现在Android的官网上已经由四层增加到了五层，如图<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/android%E7%BB%84%E4%BB%B6.png" alt="">  </p>
+<h4 id="1、Linux内核层"><a href="#1、Linux内核层" class="headerlink" title="1、Linux内核层"></a>1、Linux内核层</h4><p>Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。这一层为Android设备的各种硬件提供了底层的驱动，如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等。使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。</p>
+<h4 id="2、硬件抽象层（HAL）"><a href="#2、硬件抽象层（HAL）" class="headerlink" title="2、硬件抽象层（HAL）"></a>2、硬件抽象层（HAL）</h4><p>硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。</p>
+<h4 id="3、Android-Runtime-原生-C-C-库"><a href="#3、Android-Runtime-原生-C-C-库" class="headerlink" title="3、Android Runtime + 原生 C/C++ 库"></a>3、Android Runtime + 原生 C/C++ 库</h4><blockquote>
+<p><strong>Android Runtime</strong>:<br>对于运行 Android 5.0（API 级别 21）或更高版本的设备，每个应用都在其自己的进程中运行，并且有其自己的 Android Runtime (ART) 实例。ART 编写为通过执行 DEX 文件在低内存设备上运行多个虚拟机，DEX 文件是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。编译工具链（例如 Jack）将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。<br>ART 的部分主要功能包括：<br>预先 (AOT) 和即时 (JIT) 编译<br>优化的垃圾回收 (GC)<br>在 Android 9（API 级别 28）及更高版本的系统中，支持将应用软件包中的 Dalvik Executable 格式 (DEX) 文件转换为更紧凑的机器代码。<br>更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置观察点以监控特定字段<br>在 Android 版本 5.0（API 级别 21）之前，Dalvik 是 Android Runtime。如果您的应用在 ART 上运行效果很好，那么它应该也可在 Dalvik 上运行，但反过来不一定。<br>Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 Java 8 语言功能。</p>
+</blockquote>
+<blockquote>
+<p><strong>原生 C/C++ 库</strong>:<br>许多核心 Android 系统组件和服务（例如 ART 和 HAL）构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。<br>如果开发的是需要 C 或 C++ 代码的应用，可以使用 Android NDK 直接从原生代码访问某些原生平台库。</p>
+</blockquote>
+<h4 id="4、Java-API-Framework"><a href="#4、Java-API-Framework" class="headerlink" title="4、Java API Framework"></a>4、Java API Framework</h4><p>您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：</p>
+<ul>
+<li>丰富、可扩展的视图系统，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器</li>
+<li>资源管理器，用于访问非代码资源，例如本地化的字符串、图形和布局文件</li>
+<li>通知管理器，可让所有应用在状态栏中显示自定义提醒</li>
+<li>Activity 管理器，用于管理应用的生命周期，提供常见的导航返回栈</li>
+<li>内容提供程序，可让应用访问其他应用（例如“联系人”应用）中的数据或者共享  </li>
+</ul>
+<p>其自己的数据开发者可以完全访问 Android 系统应用使用的框架 API。</p>
+<h4 id="5、System-Apps"><a href="#5、System-Apps" class="headerlink" title="5、System Apps"></a>5、System Apps</h4><p>Android 随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘（有一些例外，例如系统的“设置”应用）。  </p>
+<p>系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。</p>
 <h2 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h2><p>我的理解：在由当前视图切换到另一视图时，当前Activity会onPause→onStop<br>当切换回来会onRestart→onStart→onResume:<br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/activitylife.png" alt=""><br><img src="http://www.yama.gz.cn/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E9%85%8D%E5%9B%BE/%E9%9D%A2%E6%9D%BF%E8%AF%A6%E8%A7%A31.PNG" alt=""></p>
 
     
@@ -505,7 +526,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见单位"><span class="toc-number">1.</span> <span class="toc-text">常见单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-number">2.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四大组件"><span class="toc-number">3.</span> <span class="toc-text">四大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project项目结构"><span class="toc-number">4.</span> <span class="toc-text">Project项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app目录结构"><span class="toc-number">5.</span> <span class="toc-text">app目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res目录结构"><span class="toc-number">6.</span> <span class="toc-text">res目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Androidmanifest-xml文件"><span class="toc-number">7.</span> <span class="toc-text">Androidmanifest.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#build-gradle文件"><span class="toc-number">8.</span> <span class="toc-text">build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app下的build-gradle文件"><span class="toc-number">9.</span> <span class="toc-text">app下的build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logcat→日志猫的使用"><span class="toc-number">10.</span> <span class="toc-text">Logcat→日志猫的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android程序的逻辑和视图分离"><span class="toc-number">11.</span> <span class="toc-text">Android程序的逻辑和视图分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">12.</span> <span class="toc-text">Activity生命周期</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见单位"><span class="toc-number">1.</span> <span class="toc-text">常见单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-number">2.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四大组件"><span class="toc-number">3.</span> <span class="toc-text">四大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project项目结构"><span class="toc-number">4.</span> <span class="toc-text">Project项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app目录结构"><span class="toc-number">5.</span> <span class="toc-text">app目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res目录结构"><span class="toc-number">6.</span> <span class="toc-text">res目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Androidmanifest-xml文件"><span class="toc-number">7.</span> <span class="toc-text">Androidmanifest.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#build-gradle文件"><span class="toc-number">8.</span> <span class="toc-text">build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app下的build-gradle文件"><span class="toc-number">9.</span> <span class="toc-text">app下的build.gradle文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logcat→日志猫的使用"><span class="toc-number">10.</span> <span class="toc-text">Logcat→日志猫的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android程序的逻辑和视图分离"><span class="toc-number">11.</span> <span class="toc-text">Android程序的逻辑和视图分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android四大组件"><span class="toc-number">12.</span> <span class="toc-text">Android四大组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、Linux内核层"><span class="toc-number">12.0.1.</span> <span class="toc-text">1、Linux内核层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、硬件抽象层（HAL）"><span class="toc-number">12.0.2.</span> <span class="toc-text">2、硬件抽象层（HAL）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、Android-Runtime-原生-C-C-库"><span class="toc-number">12.0.3.</span> <span class="toc-text">3、Android Runtime + 原生 C/C++ 库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、Java-API-Framework"><span class="toc-number">12.0.4.</span> <span class="toc-text">4、Java API Framework</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、System-Apps"><span class="toc-number">12.0.5.</span> <span class="toc-text">5、System Apps</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">13.</span> <span class="toc-text">Activity生命周期</span></a></li></ol>
                     </div>
                 </span>
             </div>
