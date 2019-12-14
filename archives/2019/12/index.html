@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Y-thdong">
-  <title>笔记 | Thdong</title>
+  <title>Archives: 2019/12 | Thdong</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScript、HondaCBR650R">
-<meta property="og:type" content="article">
-<meta property="og:title" content="笔记">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;10&#x2F;11&#x2F;%E7%AC%94%E8%AE%B0&#x2F;index.html">
+  <meta name="description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
+<meta name="keywords" content="JavaScript、HondaCBR650R">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thdong">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
+<meta property="og:description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-26T02:56:59.804Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
@@ -189,254 +190,54 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-笔记" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/" class="archive-article-date">
+        <time datetime="2019-12-14T07:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-14</time>
+</a>
+
+        </div>
+    	 
   
-  
-    <h1 class="article-title" itemprop="name">
-      笔记
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/">Git笔记</a>
+	
     </h1>
   
 
 
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
+        <div class="article-info info-on-right">
+          
+          
 
-<a href="/2019/10/11/%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-10-11T15:47:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">630字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-<a id="more"></a>
-
-<h5 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h5><p>BOM核心，指当前浏览器对象窗口<br>所有JS全局对象、函数、变量均为window对象成员<br>例如全局变量位window属性、全局函数为window方法，甚至document也是其属性之一</p>
-<h5 id="window尺寸"><a href="#window尺寸" class="headerlink" title="window尺寸"></a>window尺寸</h5><p>window.innerWidth 浏览器窗口内部高度(不包含滚动条)<br>window.innerHeight</p>
-<h5 id="window方法"><a href="#window方法" class="headerlink" title="window方法"></a>window方法</h5><p>window.open(); 打开新窗口（一般会被浏览器拦截）<br>window.close(); 关闭当前窗口</p>
-<h5 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h5><p>（1）setInterval有固定的时间延迟循环调用函数<br>        对应clearInterval(nIntervId);要取消的定时器的 ID。是由 setInterval() 返回的。<br>        值得一提的是，所用的ID池setInterval()和setTimeout()共享，<br>        这意味着你可以在技术上使用clearInterval()和clearTimeout()互换。<br>        但是，为清楚起见，应避免这样做。<br>（2）setTimeout在定时器到期后执行一个函数或指定的一段代码<br>        对应scope.clearTimeout(timeoutID)<br>        您要取消的超时的标识符。此ID是通过对的相应调用返回的setTimeout()。<br>        值得一提的是ID的池使用setTimeout()和setInterval()共享，<br>        这意味着你可以在技术上使用clearTimeout()和clearInterval()互换。<br>        但是，为清楚起见，应避免这样做。</p>
-<h5 id="History对象"><a href="#History对象" class="headerlink" title="History对象"></a>History对象</h5><p>window.history对象包含浏览器的历史（url）的集合<br>    方法：<br>        （1）history.back();<br>        （2）history.forward();<br>        （3）history.go();</p>
-<h5 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h5><p>用于获取当前页面的地址（URL），并把浏览器重新定向到新的页面。<br>    属性：<br>        （1）location.hostname返回web主机域名<br>        （2）location.pathname返回档期那文件的路径和文件名<br>        （3）location.port返回web主机端口<br>        （4）location.protocol返回所使用的web协议（http或https）<br>        （5）location.href返回当前页面的url<br>        （6）location.assign()加载新的文档</p>
-<h5 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h5><p> window.screen对象包含有关用户屏幕的信息<br>    属性：<br>        （1）screen.availHeight可用屏幕高度<br>        （2）screen.availWidth可用屏幕宽度<br>        （3）screen.Height屏幕高度<br>        （4）screen.Width屏幕宽度</p>
-<h5 id="认识面向对象"><a href="#认识面向对象" class="headerlink" title="认识面向对象"></a>认识面向对象</h5><p> 概念：<br>        （1）一切事物皆对象<br>        （2）对象具有封装性和继承特性<br>        （3）信息隐藏<br>    创建：<br>        （1）直接命名赋值<br>        （2）函数构造器</p>
-<h5 id="深入了解面向对象"><a href="#深入了解面向对象" class="headerlink" title="深入了解面向对象"></a>深入了解面向对象</h5><p> JS中不存在类的概念，但可以使用function模拟类<br>    注意原型链prototype的使用，以及类套类+（立即执行函数）闭包实现封装<br>    prototype 属性使您有能力向对象添加属性和方法<br>    封装之后可以使用window赋值向外部提供一个引用的接口<br>    不管方法还是属性直接赋值就可以 例：<code>window.person = person;</code></p>
-
-    
-
-    
-    <div class="page-reward">
-      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>Thank you!<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  
-                </div>
-              </span>
-            </span>
-          </span>
         </div>
-      </a>
-    </div>
-    
-
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          YAMA
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="https://github.com/Y-thdong/2019/10/11/笔记/" title="笔记" target="_blank">https://github.com/Y-thdong/2019/10/11/笔记/</a>
-        </li>
-        <li>
-          <strong>版权声明： </strong>
-          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
-        </li>
-      </ul>
-    </div>
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2019/10/11/%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
-  
-    <a href="/2019/10/12/2019-10-12-23%E9%9A%8F%E7%AC%94/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2019-10-12-23随笔
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/11/ArcSDE-10-1%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E8%BF%9E%E6%8E%A5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ArcSDE 10.1安装、配置、连接</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#window对象"><span class="toc-number">1.</span> <span class="toc-text">window对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#window尺寸"><span class="toc-number">2.</span> <span class="toc-text">window尺寸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#window方法"><span class="toc-number">3.</span> <span class="toc-text">window方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#计时器"><span class="toc-number">4.</span> <span class="toc-text">计时器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#History对象"><span class="toc-number">5.</span> <span class="toc-text">History对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Location对象"><span class="toc-number">6.</span> <span class="toc-text">Location对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#screen对象"><span class="toc-number">7.</span> <span class="toc-text">screen对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#认识面向对象"><span class="toc-number">8.</span> <span class="toc-text">认识面向对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#深入了解面向对象"><span class="toc-number">9.</span> <span class="toc-text">深入了解面向对象</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-<div id="SOHUCS" sid="笔记" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
-
-
-
-
-
-
-
-
+    
 
 
           </div>
@@ -477,8 +278,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
