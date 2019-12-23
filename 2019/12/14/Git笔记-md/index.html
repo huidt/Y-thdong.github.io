@@ -16,14 +16,14 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;12&#x2F;14&#x2F;Git%E7%AC%94%E8%AE%B0-md&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Y-thdong&#x2F;image&#x2F;master&#x2F;%E4%BB%93%E5%BA%931.jpg?token=ALNKGIIRKV2I3AYFJ7RG23K56RW26">
-<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;image&#x2F;blob&#x2F;master&#x2F;%E4%BB%93%E5%BA%932.jpg?raw=true">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Y-thdong&#x2F;image&#x2F;master&#x2F;%E7%AC%94%E8%AE%B01.jpg?token=ALNKGIPV4WIRWFCGKBXAGVC56RIK4">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Y-thdong&#x2F;image&#x2F;master&#x2F;%E5%88%86%E6%94%AF1.png?token=ALNKGILX64JN7ZZ3WDR73J256RWPG">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Y-thdong&#x2F;image&#x2F;master&#x2F;%E5%88%86%E6%94%AF2.png?token=ALNKGIIF6FLT2473FY723ES56RWPQ">
-<meta property="og:updated_time" content="2019-12-14T07:14:22.102Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E4%BB%93%E5%BA%931.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E4%BB%93%E5%BA%932.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E7%AC%94%E8%AE%B01.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E5%88%86%E6%94%AF1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E5%88%86%E6%94%AF2.png">
+<meta property="og:updated_time" content="2019-12-23T07:50:59.430Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Y-thdong&#x2F;image&#x2F;master&#x2F;%E4%BB%93%E5%BA%931.jpg?token=ALNKGIIRKV2I3AYFJ7RG23K56RW26">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;Git%E7%AC%94%E8%AE%B0&#x2F;%E4%BB%93%E5%BA%931.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
   
@@ -261,17 +261,17 @@
 <li>通过 <code>git init</code> 命令把这个目录变成Git可以管理的仓库，通过用 <code>ls -ah</code> 命令就可以看见目录下的文件</li>
 </ol>
 <h2 id="把文件添加到版本库"><a href="#把文件添加到版本库" class="headerlink" title="把文件添加到版本库"></a>把文件添加到版本库</h2><p><code>$ git add 文件名</code>  </p>
-<img src="https://raw.githubusercontent.com/Y-thdong/image/master/%E4%BB%93%E5%BA%931.jpg?token=ALNKGIIRKV2I3AYFJ7RG23K56RW26">  
-
+<p><img src="http://ythdong.gitee.io/blog_image/Git%E7%AC%94%E8%AE%B0/%E4%BB%93%E5%BA%931.jpg" alt=""></p>
 <p><code>$ git commit -m &quot;你的注释&quot;</code>  </p>
-<img src="https://github.com/Y-thdong/image/blob/master/%E4%BB%93%E5%BA%932.jpg?raw=true">
-
+<p><img src="http://ythdong.gitee.io/blog_image/Git%E7%AC%94%E8%AE%B0/%E4%BB%93%E5%BA%932.jpg" alt=""></p>
 <p>因为commit可以一次提交很多文件，所以你可以多次add不同的文件</p>
 <h2 id="版本操作"><a href="#版本操作" class="headerlink" title="版本操作"></a>版本操作</h2><p>运行<code>git status</code>命令看看结果<br><code>git diff</code>查看difference<br>commit之后再使用<code>git status</code>，Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working tree clean）的。<br><code>$ git add 文件名</code> 和 <code>$ git commit -m &quot;你的注释&quot;</code><br><code>git log</code> 命令显示从最近到最远的提交日志，用于查看提交历史，以便确定要回退到哪个版本。<br>版本回退Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。<br>回退可以使用 <code>git reset</code>命令  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">$ git reset --hard 1094a</span><br></pre></td></tr></table></figure>
 
 <p>如果记不得ID可以使用 <code>git reflog</code> 查看命令历史，以便确定要回到未来的哪个版本</p>
-<h2 id="版本库与工作区"><a href="#版本库与工作区" class="headerlink" title="版本库与工作区"></a>版本库与工作区</h2><p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用 <code>git add</code> 把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用 <code>git commit</code> 提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br><img src="https://raw.githubusercontent.com/Y-thdong/image/master/%E7%AC%94%E8%AE%B01.jpg?token=ALNKGIPV4WIRWFCGKBXAGVC56RIK4" width="400px" style="transform:rotate(-90deg)"><br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在， <code>git commit</code> 就是往master分支上提交更改。  </p>
+<h2 id="版本库与工作区"><a href="#版本库与工作区" class="headerlink" title="版本库与工作区"></a>版本库与工作区</h2><p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用 <code>git add</code> 把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用 <code>git commit</code> 提交更改，实际上就是把暂存区的所有内容提交到当前分支。  </p>
+<p><img src="http://ythdong.gitee.io/blog_image/Git%E7%AC%94%E8%AE%B0/%E7%AC%94%E8%AE%B01.jpg" alt=""></p>
+<p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在， <code>git commit</code> 就是往master分支上提交更改。  </p>
 <h2 id="撤销删除"><a href="#撤销删除" class="headerlink" title="撤销删除"></a>撤销删除</h2><p>命令 <code>git checkout -- readme.txt</code> 意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>总之，就是让这个文件回到最近一次 <code>git commit</code> 或 <code>git add</code> 时的状态。<br><code>git reset HEAD 文件名</code> 可以把暂存区的修改撤销掉（unstage），重新放回工作区，然后再使用上面的命令撤销工作区的修改即可  </p>
 <p>当你直接在文件夹中把没用的文件删了，或者用rm命令删了：<code>$ rm test.txt</code><br>在使用<code>git status</code>查看状态Git会告诉你哪些文件删除了，那么现在有两种选择  </p>
 <ol>
@@ -299,7 +299,8 @@
 <blockquote>
 <p>注意Git还有使用<code>$ git switch -c dev</code>创建并切换分支的方法，<code>$ git switch master</code>切换分支</p>
 </blockquote>
-<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当你再dev分支和master分支分别同一份文件做了修改并且都 <code>git add</code> 到了暂存区，当你尝试 <code>git commit</code> 时大概率会报错，Git告诉我们文件存在冲突必须手动解决之后才能解决，通过运行<code>git status</code>命令查看冲突的文件<br><img src="https://raw.githubusercontent.com/Y-thdong/image/master/%E5%88%86%E6%94%AF1.png?token=ALNKGILX64JN7ZZ3WDR73J256RWPG"><br><img src="https://raw.githubusercontent.com/Y-thdong/image/master/%E5%88%86%E6%94%AF2.png?token=ALNKGIIF6FLT2473FY723ES56RWPQ">  </p>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当你再dev分支和master分支分别同一份文件做了修改并且都 <code>git add</code> 到了暂存区，当你尝试 <code>git commit</code> 时大概率会报错，Git告诉我们文件存在冲突必须手动解决之后才能解决，通过运行<code>git status</code>命令查看冲突的文件  </p>
+<p><img src="http://ythdong.gitee.io/blog_image/Git%E7%AC%94%E8%AE%B0/%E5%88%86%E6%94%AF1.png" alt=""><br><img src="http://ythdong.gitee.io/blog_image/Git%E7%AC%94%E8%AE%B0/%E5%88%86%E6%94%AF2.png" alt=""></p>
 <h2 id="BUG分支"><a href="#BUG分支" class="headerlink" title="BUG分支"></a>BUG分支</h2><p>假设你在一个分支中需要临时解决一个BUG，但此时还不不能提交你坐在的分支却又要创建临时分支解决BUG，怎么办？<br>Git提供了 <code>git stash</code> 让我们可以保存现场，假设需要在master分支上修复BUG，则 <code>git checkout master</code> 切换过去，在此分支上创建临时分支： <code>$ git checkout -b issue-101</code> ,修复BUG，在add和commit临时分支之后再切换到master分支合并临时分支： <code>git merge --no-ff -m &quot;merged bug fix 101&quot; issue-101</code> ,最后删除临时分支，最后回到dev分支，使用 <code>$ git stash list</code>查看刚才的工作现场<br>接下来：一是用 <code>git stash apply</code> 恢复，但是恢复后，stash内容并不删除，你需要用 <code>git stash drop</code> 来删除；<br>另一种方式是用 <code>git stash pop</code> ，恢复的同时把stash内容也删了<br>最后使用 <code>$ git stash list</code> 查看，stash区已经清空了<br>你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令： <code>$ git stash apply stash@{0}</code>  </p>
 <p>当你在master的分支修改完之后发现dev分支存在同样的错误怎么办？再改一次？<br>Git专门提供了一个 <code>cherry-pick</code> 命令，让我们能复制一个特定的提交到当前分支  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">$ git cherry-pick 4c805e2</span><br><span class="line">[master 1d4b803] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
