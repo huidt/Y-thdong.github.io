@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Y-thdong">
-  <title>Thdong</title>
+  <title>jQuery | Thdong</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="Thdong&#39;s Blog &amp; Web Develpoer">
-  
-  <meta name="description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Thdong">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;index.html">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2019&#x2F;12&#x2F;31&#x2F;jQuery&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;jquery&#x2F;%E6%8D%95%E8%8E%B71.PNG">
+<meta property="og:updated_time" content="2019-12-31T09:01:32.722Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;jquery&#x2F;%E6%8D%95%E8%8E%B71.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
   
@@ -193,25 +191,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-jQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-jQuery" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/31/jQuery/">jQuery</a>
-	
+    <h1 class="article-title" itemprop="name">
+      jQuery
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/12/31/jQuery/" class="archive-article-date">
         <time datetime="2019-12-31T09:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
 </a>
@@ -219,6 +217,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -226,13 +245,112 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!--toc-->
-    
-    <a class="article-more-a" href="/2019/12/31/jQuery/#more">more >></a>
-    
-    
+<a id="more"></a>
+<blockquote>
+<p>Note：This article is my study note, without copyright，most of the content comes from <a href="https://learn.jquery.com" target="_blank" rel="noopener">jQuery官网</a>，if there is any infringement, please contact E-mail:<a href="mailto:2480227471@qq.com" target="_blank" rel="noopener">YAMA</a></p>
+</blockquote>
+<h2 id="ABout-jQuery"><a href="#ABout-jQuery" class="headerlink" title="ABout jQuery"></a>ABout jQuery</h2><h3 id="Callback-without-Arguments"><a href="#Callback-without-Arguments" class="headerlink" title="Callback without Arguments"></a>Callback without Arguments</h3><p>If a callback has no arguments, you can pass it in like this:<br><code>$.get( &quot;myhtmlpage.html&quot;, myCallBack );</code><br>When <code>$.get()</code> finishes getting the page <code>myhtmlpage.html</code>, it executes the <code>myCallBack()</code> function.</p>
+<p><strong>Note:</strong> The second parameter here is simply the function name (but not as a string, and without parentheses(括号).</p>
+<h3 id="Callback-with-Arguments"><a href="#Callback-with-Arguments" class="headerlink" title="Callback with Arguments"></a>Callback with Arguments</h3><p>Executing callbacks with arguments can be tricky(棘手).<br>This code example will not work:<br><strong>Wrong</strong>:<code>$.get( &quot;myhtmlpage.html&quot;, myCallBack( param1, param2 ) );</code><br>The reason this fails is that the code executes myCallBack( param1, param2 ) immediately and then passes myCallBack()’s return value as the second parameter to $.get(). We actually want to pass the function myCallBack(), not myCallBack( param1, param2 )’s return value (which might or might not be a function). So, how to pass in myCallBack() and include its arguments?</p>
+<p><strong>Right</strong><br>To defer(推迟) executing <code>myCallBack()</code> with its parameters, you can use an anonymous(匿名的) function as a wrapper(包装器). Note the use of function() {. The anonymous function does exactly one thing: calls <code>myCallBack()</code>, with the values of param1 and param2.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.get( &quot;myhtmlpage.html&quot;, function() &#123;</span><br><span class="line">    myCallBack( param1, param2 );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>When <code>$.get()</code> finishes getting the page <code>myhtmlpage.html</code>, it executes the anonymous function, which executes <code>myCallBack( param1, param2 )</code>.</p>
+<h2 id="Additional-jQuery-Support"><a href="#Additional-jQuery-Support" class="headerlink" title="Additional jQuery Support"></a>Additional jQuery Support</h2><p><strong>Official Forums(论坛)</strong><a href="http://forum.jquery.com/" target="_blank" rel="noopener">http://forum.jquery.com/</a><br>There are many subforums(子论坛) where you can discuss jQuery, ask questions, talk about JavaScript, or announce your plugins.</p>
+<h2 id="Using-jQuery-Core"><a href="#Using-jQuery-Core" class="headerlink" title="Using jQuery Core"></a>Using jQuery Core</h2><h3 id="vs"><a href="#vs" class="headerlink" title="$ vs $()"></a>$ vs $()</h3><p><code>$( &quot;h1&quot; ).remove();</code><br>Most jQuery methods are called on jQuery objects as shown above; these methods are said to be part of the <code>$.fn</code> namespace(命名空间), or the “jQuery prototype(原型),” and are best thought of as jQuery object methods.  </p>
+<p>However, there are several methods that do not act on a selection; these methods are said to be part of the jQuery namespace, and are best thought of as core jQuery methods.</p>
+<p>This distinction(区别) can be incredibly(令人难以置信的) confusing(令人困惑) to new jQuery users. Here’s what you need to remember:</p>
+<ul>
+<li>Methods called on jQuery selections are in the <code>$.fn</code> namespace, and automatically receive and return the selection as <code>this</code>.</li>
+</ul>
+<blockquote>
+<p>翻译：jQuery选择上调用的方法位于<code>$ .fn</code>命名空间中，并以此方式自动接收并返回选择。</p>
+</blockquote>
+<ul>
+<li>Methods in the <code>$</code> namespace are generally(通常) utility-type(实用型) methods, and do not work with selections; they are not automatically passed any arguments, and their return value will vary(变化).</li>
+</ul>
+<blockquote>
+<p>翻译：<code>$</code>名称空间中的方法通常是实用程序类型的方法，不能与选择一起使用。<strong>它们不会自动传递任何参数，并且它们的返回值会有所不同</strong></p>
+</blockquote>
+<p>There are a few cases where object methods and core methods have the same names, such as $.each() and .each(). In these cases, be extremely careful when reading the documentation that you are exploring the correct method.</p>
+<p>In this guide, if a method can be called on a jQuery selection, we’ll refer to it(引用他) just by its name: <code>.each()</code>. If it is a utility(实用的) method – that is, a method that isn’t called on a selection – we’ll refer to it explicitly(明确的、显示地) as a method in the jQuery namespace: <code>$.each()</code>.</p>
+<p><strong>$(document).ready()</strong><br>Code included inside <code>$( document ).ready()</code> will only run once the page <strong>Document Object Model (DOM)</strong> is ready for JavaScript code to execute. Code included inside <code>$( window ).on( &quot;load&quot;, function() { ... })</code> will run once the entire page (images or iframes), <strong>not just the DOM</strong>, is ready.  </p>
+<p><img src="http://ythdong.gitee.io/blog_image/jquery/%E6%8D%95%E8%8E%B71.PNG" alt=""><br>All in all, <code>$( window ).on( &quot;load&quot; )</code> is loaded after the DOM</p>
+<h3 id="Avoiding-Conflicts"><a href="#Avoiding-Conflicts" class="headerlink" title="Avoiding Conflicts"></a>Avoiding Conflicts</h3><ol>
+<li><p>Thus, if you are using another JavaScript library that uses the <code>$</code> variable(变量), you can run into conflicts with jQuery. In order to avoid these conflicts, you need to put jQuery in no-conflict mode immediately after it is loaded onto the page and before you attempt to use jQuery in your page.<br>When you put jQuery into no-conflict mode, you have the option of assigning a new variable name to replace the $ alias(别名).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var hh = jQuery.noConflict();</span><br><span class="line">hh(document).ready(function () &#123;</span><br><span class="line">    console.log(&quot;document loaded&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>hh</code> is now an alias to the jQuery function; creating the new alias is optional.and in the code above, the <code>$</code> will revert back to(恢复) its meaning in original(原始的) library.</p>
+</li>
+<li><p><strong>Including jQuery Before Other Libraries</strong><br>The code snippets(片段) above rely on jQuery being loaded after <code>prototype.js</code> is loaded. If you include jQuery before other libraries, you may use jQuery when you do some work with jQuery, but the <code>$</code> will have the meaning defined in the other library. There is no need to relinquish(放弃) the <code>$</code> alias by calling <code>jQuery.noConflict()</code>.</p>
+</li>
+<li><p>Use an Immediately Invoked Function Expression</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    jQuery.noConflict();</span><br><span class="line">    (function( $ ) &#123;</span><br><span class="line">        // Your jQuery code here, using the $</span><br><span class="line">    &#125;)( jQuery );</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>Note that if you use this technique, you will not be able to use prototype.js methods inside the immediately invoked function. <code>$</code> will be a reference(引用) to jQuery, not prototype.js.</p>
+</li>
+<li><p>Use the Argument That’s Passed to the <code>jQuery( document ).ready()</code> Function</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">jQuery(document).ready(function( $ ) &#123;</span><br><span class="line">    // Your jQuery code here, using $ to refer to jQuery.</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>Or using the more concise(简洁) syntax for the DOM ready function:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">jQuery(function($)&#123;</span><br><span class="line">    // Your jQuery code here, using the $</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><p>An element’s attributes is useful for your application,so it’s important to be get and set them.</p>
+<h3 id="Selecting-Elements"><a href="#Selecting-Elements" class="headerlink" title="Selecting Elements"></a>Selecting Elements</h3><h3 id="Working-with-Selections"><a href="#Working-with-Selections" class="headerlink" title="Working with Selections"></a>Working with Selections</h3><h3 id="Manipulating-Elements"><a href="#Manipulating-Elements" class="headerlink" title="Manipulating Elements"></a>Manipulating Elements</h3><h3 id="The-jQuery-Object"><a href="#The-jQuery-Object" class="headerlink" title="The jQuery Object"></a>The jQuery Object</h3><h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><h3 id="CSS-Styling-amp-Dimensions"><a href="#CSS-Styling-amp-Dimensions" class="headerlink" title="CSS, Styling, &amp; Dimensions"></a>CSS, Styling, &amp; Dimensions</h3><h3 id="Data-Methods"><a href="#Data-Methods" class="headerlink" title="Data Methods"></a>Data Methods</h3><h3 id="Utility-Methods"><a href="#Utility-Methods" class="headerlink" title="Utility Methods"></a>Utility Methods</h3><h3 id="Iterating-over-jQuery-and-non-jQuery-Objects"><a href="#Iterating-over-jQuery-and-non-jQuery-Objects" class="headerlink" title="Iterating over jQuery and non-jQuery Objects"></a>Iterating over jQuery and non-jQuery Objects</h3><h3 id="Using-jQuery’s-index-Function"><a href="#Using-jQuery’s-index-Function" class="headerlink" title="Using jQuery’s .index() Function"></a>Using jQuery’s .index() Function</h3><h3 id="Frequently-Asked-Questions"><a href="#Frequently-Asked-Questions" class="headerlink" title="Frequently Asked Questions"></a>Frequently Asked Questions</h3><ul>
+<li>How do I select an item using class or ID?</li>
+<li>How do I select elements when I already have a DOM element?</li>
+<li>How do I test whether an element has a particular class?</li>
+<li>How do I test whether an element exists?</li>
+<li>How do I determine the state of a toggled element?</li>
+<li>How do I select an element by an ID that has characters used in CSS notation?</li>
+<li>How do I disable/enable a form element?</li>
+<li>How do I check/uncheck a checkbox input or radio button?</li>
+<li>How do I get the text value of a selected option?</li>
+<li>How do I replace text from the 3rd element of a list of 10 items?</li>
+<li>How do I pull a native DOM element from a jQuery object?</li>
+</ul>
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>Thank you!<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          YAMA
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/Y-thdong/2019/12/31/jQuery/" title="jQuery" target="_blank">https://github.com/Y-thdong/2019/12/31/jQuery/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -242,16 +360,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/31/jQuery/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2019/12/31/jQuery/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -266,711 +444,43 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Git笔记-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/">Git笔记</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/" class="archive-article-date">
-        <time datetime="2019-12-14T07:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-14</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ABout-jQuery"><span class="toc-number">1.</span> <span class="toc-text">ABout jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Callback-without-Arguments"><span class="toc-number">1.1.</span> <span class="toc-text">Callback without Arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Callback-with-Arguments"><span class="toc-number">1.2.</span> <span class="toc-text">Callback with Arguments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Additional-jQuery-Support"><span class="toc-number">2.</span> <span class="toc-text">Additional jQuery Support</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-jQuery-Core"><span class="toc-number">3.</span> <span class="toc-text">Using jQuery Core</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vs"><span class="toc-number">3.1.</span> <span class="toc-text">$ vs $()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Avoiding-Conflicts"><span class="toc-number">3.2.</span> <span class="toc-text">Avoiding Conflicts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">3.3.</span> <span class="toc-text">Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Selecting-Elements"><span class="toc-number">3.4.</span> <span class="toc-text">Selecting Elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Working-with-Selections"><span class="toc-number">3.5.</span> <span class="toc-text">Working with Selections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manipulating-Elements"><span class="toc-number">3.6.</span> <span class="toc-text">Manipulating Elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-jQuery-Object"><span class="toc-number">3.7.</span> <span class="toc-text">The jQuery Object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversing"><span class="toc-number">3.8.</span> <span class="toc-text">Traversing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-Styling-amp-Dimensions"><span class="toc-number">3.9.</span> <span class="toc-text">CSS, Styling, &amp; Dimensions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Methods"><span class="toc-number">3.10.</span> <span class="toc-text">Data Methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utility-Methods"><span class="toc-number">3.11.</span> <span class="toc-text">Utility Methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterating-over-jQuery-and-non-jQuery-Objects"><span class="toc-number">3.12.</span> <span class="toc-text">Iterating over jQuery and non-jQuery Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-jQuery’s-index-Function"><span class="toc-number">3.13.</span> <span class="toc-text">Using jQuery’s .index() Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Frequently-Asked-Questions"><span class="toc-number">3.14.</span> <span class="toc-text">Frequently Asked Questions</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-Android笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/">Android笔记</a>
-	
-    </h1>
-  
 
+<div id="SOHUCS" sid="jQuery" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
 
-  
-  
-<a href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-11-29T14:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
 
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/">Java笔记</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-11-29T14:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-FPGA复习专用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/">FPGA复习专用</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/" class="archive-article-date">
-        <time datetime="2019-11-14T09:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-11-11随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/">2019.11.11随笔</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/" class="archive-article-date">
-        <time datetime="2019-11-11T14:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微电子复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/">微电子复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2019-11-04T10:23:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-单词1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/">单词1</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/01/%E5%8D%95%E8%AF%8D1/" class="archive-article-date">
-        <time datetime="2019-10-31T16:00:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jQuery-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/10/21/jQuery-HTML/">jQuery HTML</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/10/21/jQuery-HTML/" class="archive-article-date">
-        <time datetime="2019-10-21T09:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/10/21/jQuery-HTML/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/21/jQuery-HTML/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jQuery笔记2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/">jQuery笔记2</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-        <time datetime="2019-10-20T07:52:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/20/jQuery%E7%AC%94%E8%AE%B02/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1010,8 +520,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
