@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Y-thdong">
-  <title>Thdong</title>
+  <title>JavaScript-winter | Thdong</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="Thdong&#39;s Blog &amp; Web Develpoer">
-  
-  <meta name="description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
-<meta name="keywords" content="JavaScript、HondaCBR650R">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Thdong">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;index.html">
+  <meta name="keywords" content="JavaScript、HondaCBR650R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript-winter">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Y-thdong&#x2F;2020&#x2F;02&#x2F;09&#x2F;JavaScript-winter&#x2F;index.html">
 <meta property="og:site_name" content="Thdong">
-<meta property="og:description" content="Thdong&amp;apos;s Blog &amp; Web Develpoer">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;JavaScript&#x2F;%E6%8D%95%E8%8E%B71.PNG">
+<meta property="og:image" content="https:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;JavaScript&#x2F;%E6%8D%95%E8%8E%B72.PNG">
+<meta property="og:image" content="https:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;JavaScript&#x2F;%E6%8D%95%E8%8E%B73.PNG">
+<meta property="og:updated_time" content="2020-02-09T08:50:38.418Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;ythdong.gitee.io&#x2F;blog_image&#x2F;JavaScript&#x2F;%E6%8D%95%E8%8E%B71.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Thdong" type="application/atom+xml">
   
@@ -193,25 +193,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-JavaScript-winter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JavaScript-winter" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/09/JavaScript-winter/">JavaScript-winter</a>
-	
+    <h1 class="article-title" itemprop="name">
+      JavaScript-winter
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/02/09/JavaScript-winter/" class="archive-article-date">
         <time datetime="2020-02-09T08:49:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
 </a>
@@ -219,6 +219,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.8k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">11分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -226,13 +247,134 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!--toc-->
-    
-    <a class="article-more-a" href="/2020/02/09/JavaScript-winter/#more">more >></a>
-    
+<a id="more"></a>
+
+<h2 id="原型-amp-原型链-？"><a href="#原型-amp-原型链-？" class="headerlink" title="原型&amp;原型链 ？"></a>原型&amp;原型链 ？</h2><p>JavaScript构造函数内部原理  </p>
+<ol>
+<li>在函数体最前面隐式地加上<code>this = {}</code>（这一步存在疑问）</li>
+<li>执行this.XXX = xxx</li>
+<li>隐式地返回this</li>
+</ol>
+<p>下面看代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    Person.prototype.age = 22;</span><br><span class="line">    function Person() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    var per = new Person();</span><br><span class="line">    console.log(per.age);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>Person()是一个构造函数，而<code>.prototype</code>是系统在Person出生时添加的属性，译为原型，原型是构造函数构造出的对象的公共祖先，如果不对它做什么修改，那么原型值 = {}，此处我们加了age = 22<br><img src="https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B71.PNG" alt="">  </p>
+<blockquote>
+<p>此处附加一个小知识，图中浅粉色代表系统给你写的，紫色代表你自己写的，见代码，构造函数是系统写的，而age是你自己在原型中加的，系统给定的构造函数我们也可以自己在代码中调出原型进行修改,如下图<br><strong>定义</strong>：原型是function对象的一个属性，见上图Person.prototype，原型定义了构造函数制造出的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的<strong>属性和方法</strong>，原型也是对象。</p>
+</blockquote>
+<p>自然而然我联想到了Java中的继承，进而有了重写，我们可以在对象中对原型的方法和属性进行重写，但是不能通过修改对象的属性修改（此处指增删改查）原型，想要修改原型只有把原型调出来才能修改,如下代码：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line">    Person.prototype.age = 22;</span><br><span class="line">    Person.prototype.name = &quot;田&quot;;</span><br><span class="line">    function Person(age,name) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    var per = new Person(23, &quot;挥动&quot;);</span><br><span class="line">    console.log(per);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B72.PNG" alt="">  </p>
+<p>开篇讲过构造函数的原理第一步<code>this = {}</code>，值得怀疑的是他到底传入的是不是空的<code>{}</code>，  </p>
+<p><img src="https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B73.PNG" alt="">  </p>
+<p>在控制台查看它<strong>并不是空</strong>的，里面有一个<code>__proto__</code>属性，那么第一步实际上应该是下面这样  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var this = &#123;</span><br><span class="line">    __proto__:Person.prototype</span><br><span class="line">&#125;;</span><br><span class="line">```  </span><br><span class="line">当我们在查找对象的属性或方法时会首先在自己里面找，如果找不到会找`__proto__`指向的原型，这样就把对象和原型连接到了一起。`__proto__`存的是对象的原型，或者换句话说每个对象都有一个`__proto__`指向构造它的原型，由此我们可以发现**`__proto__`指向的构造函数是可以修改的**，因此per的构造函数也就未必是`Person()`了，也就是说`Person()`这个构造函数构造出来的对象的原型不一定是`Person.prototype`,如下图  </span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B76.PNG)  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">**我们再来看**  </span><br><span class="line">下面的代码结果是这样的，为什么？</span><br></pre></td></tr></table></figure>
+<p>function Person() {}</p>
+<p>var per1, per2, per3;</p>
+<p>per3 = new Person();<br>Person.prototype.name = “sunny”;<br>per1 = new Person();<br>Person.prototype = {<br>    name: “cherry”<br>}<br>per2 = new Person();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我们讲到构造函数第一步相当于`var this = &#123;__proto__:Person.prototype&#125;`，**在这里`__proto__`和`Person.prototype`都相当于指向了同一个空间**，我们虽然在后面修改了`Person.prototype`的值，但是`__proto__`并没有修改，还是指向了原来的空间，所以per1最终输出仍是sunny。对于per2就涉及到了以前的预编译提升了，两个per的不同在于new到底在修改原型链之后执行还是之前执行，[该文中](https://blog.csdn.net/qq_42842786/article/details/99685621)对于预编译知识讲的很清楚</span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B75.PNG)  </span><br><span class="line"></span><br><span class="line">### 原型链</span><br></pre></td></tr></table></figure>
+<p>function Grand() {<br>    this.word = “我是你爷爷”;<br>}<br>var grand = new Grand();</p>
+<p>Father.prototype = grand; //grand是用Grand()创建的一个对象</p>
+<p>function Father() {<br>    this.name = “我是爹”;</p>
+<p>}</p>
+<p>var father = new Father();</p>
+<p>Son.prototype = father;</p>
+<p>function Son() {<br>    this.hobbit = “smoke”;<br>}<br>var son = new Son();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">像这样在原型上面再加一个原型再加原型的方法叫做原型链，原型链使用`__proto__`来连接各个原型，控制台输出如下  </span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B710.PNG)  </span><br><span class="line"></span><br><span class="line">在其中可以看出，Grand的`__proto__`指向Object，而再点开Object发现已经没有`__proto__`属性(有prototype)，说明`Object()`就是原型链的终端  </span><br><span class="line"></span><br><span class="line">### 原型链的增删改查</span><br><span class="line"></span><br><span class="line">1. 删除：只能在自己身上通过原型删除（`delete father.name`），不能通过父代或者后代来删除</span><br><span class="line">2. 增加：可以自己增，后代一般不能增，但是不排除下面这种情况：  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B711.PNG)  </span><br><span class="line"></span><br><span class="line">通过子代调用了**引用**修改或者说增加了父代的属性，这是一种调用的修改而不是赋值的修改，并且这种修改也仅限于引用值，比如原始值你就只能覆盖，不能修改。  </span><br><span class="line">3. 修改  </span><br><span class="line">4. 查询</span><br></pre></td></tr></table></figure>
+<p> Father.prototype = {<br>    num: 100<br>}<br>function Father() {<br>    this.eat = function(){<br>        this.num++;//把值拿过来+1再赋给自己<br>    }<br>}<br>var son = new Father();<br>//最后 son.num=101<br>//Father.prototype.num=100</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Object.create(原型)方法</span><br><span class="line"></span><br><span class="line">还需注意原型是隐式的内部属性，只有系统给我们的才能用，加入我们自己**在一个没有原型的对象中**添加了`__proto__`属性系统是不能识别的</span><br></pre></td></tr></table></figure>
+<script>
+    var obj = Object.create(null);
+    obj.__proto__ = {
+        name: "sunny"
+    }
+</script>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B712.PNG)  </span><br><span class="line"></span><br><span class="line">注意图中`obj.__proto__`是可以访问的，因为我们赋值的时候是一个对象`&#123;name: &quot;sunny&quot;&#125;`，但是Chrome并不能识别`obj.name`，此时的obj并不是继承自`Object.prototype`，由此总结绝大多数对象最终都会继承自`Object.prototype`，但不是全部，还需注意`Object.create(原型)`方法必须传入object或者null，不能为空</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 我们发现`toString()`方法在`Object`的原型中，那么应该说很多经过包装类的值都可以使用这个方法，不过undefined、null还有自己构造的没有原型的对象是没有这个方法的。  </span><br><span class="line">值得注意的是许多东西都可以调用`toString()`方法，按我所想调用的都是Object原型中的方法，但是事实并非如此，举个例子</span><br></pre></td></tr></table></figure>
+ <script>
+    Object.prototype.toString = function () {
+        return "人为重写";
+        //在此重写Object的toString方法  
+    }
+
+    var nun = 123;
+    console.log(nun.toString());//输出123
+    console.log(Object.prototype.toString.call(nun));//输出人为重写
+</script>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法的重写不但出现于工程师与机器之间，也存在于机器和自己之间，`nun.toString()`实际上是调用了重写的方法,为什么？因为Object的toString方法实际上不完善，输出的信息没什么用，假如调用Object的方法就会输出`&quot;[object Number]&quot;`,所以需要重写方法，诸如Boolean，Array等等都会调用重写的方法,实际情况就是它们都有自己重写的toString</span><br></pre></td></tr></table></figure>
+<p>// Boolean.prototype.toString<br>// Array.prototype.toString<br>// Number.prototype.toString<br>// Object.prototype.toString</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### call/apply</span><br><span class="line"></span><br><span class="line">上面看到了call：`Object.prototype.toString.call(nun)`,</span><br><span class="line">call的作用是改变this的指向，这里nun是调用者，调用前面的`Object.prototype.toString`方法，举个例子  </span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/code2.png)  </span><br><span class="line">此处使用了`Persn()`来构造obj，在开发中往往在某一构造函数完全覆盖另一构造函数时使用这种方法，如下，Student的需求完全覆盖了Person，就可以在Student中使用call使用Person的代码，而不用自己再写一遍，call时企业级开发组装函数的一个方法之一  </span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/code3.png)  </span><br><span class="line">为什么call()第一个参数传入this值得思考</span><br><span class="line"></span><br><span class="line">**apply**  </span><br><span class="line">apply的区别在于传参数不一样，call是一个一个把参数传进去，而call是一个arguments，也就是一个数组（不包括this），我们只需要把call()除开this的其他参数用`[]`括起来就可以了,如下  </span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/code4.png)  </span><br><span class="line"></span><br><span class="line"># 附：JS的数字操作</span><br><span class="line"></span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/code1.png)</span><br><span class="line"></span><br><span class="line">按道理来说在for循环中最后输出的数字应该都是0~100的两位数，但是结果并非如此，同样这还是因为精度不高,此处有一个解决办法就是先乘100再取整</span><br><span class="line"></span><br><span class="line">可计算范围：小数点前16位与后16位</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 2010.1.27 JavaScript笔记</span><br><span class="line"></span><br><span class="line">&gt; 以下P&lt;sub&gt;xx&lt;/sub&gt;表示《JavaScript高级程序设计》的第几页</span><br><span class="line"></span><br><span class="line">## 基本类型和引用类型的值 P69</span><br><span class="line"></span><br><span class="line">ECMAScript变量可能包含两种不同数据类型的值：**基本类型值和引用类型值**，前者指简单的数据段，后者指可能由多个值构成的对象  </span><br><span class="line">基本类型值：undefined、null、boolean、number、string  </span><br><span class="line">引用类型：对象</span><br><span class="line"></span><br><span class="line">定义基本类型值和引用类型值的方式是类似的：创建一个变量并为其赋值。但是当值保存到变量中以后，对于引用类型值我们可以对其添加属性（增删改查）  </span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B77.PNG&quot; width=&quot;400px&quot;&gt;</span><br><span class="line"></span><br><span class="line">我们不能给基本类型值添加属性，但是这样做了并不会报错。</span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B78.PNG&quot; width=&quot;500px&quot;&gt;</span><br><span class="line"></span><br><span class="line">在**赋值变量值**时  </span><br><span class="line">基本类型会在变量对象上新建一个值，把该值复制到新变量的内存上，此时两个变量的值各自独立，互不干扰  </span><br><span class="line">此时如果时引用类型值，则会赋值指针的值，该指针指向存储在堆中的一个对象，复制后两个变量将引用同一个对象，改变其中一个变量会影响另一个变量</span><br></pre></td></tr></table></figure>
+<script>
+    function Person() {
+        this.name = "hui";
+    }
+    var per1 =new Person();
+    var per2 = per1;
+    console.log(per1.name);  //输出hui
+    per2.name = "tian";
+    console.log(per1.name);  //输出tian
+</script>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">引用类型值复制示意图如下  </span><br><span class="line">![](https://ythdong.gitee.io/blog_image/JavaScript/%E6%8D%95%E8%8E%B79.PNG)  </span><br><span class="line"></span><br><span class="line">在**传递参数时**P70  </span><br><span class="line">函数都是按照值来传递的，也就是说把函数外部的值赋值给函数内部的参数，就像把值从一个变量复制到另一个变量一样（这里面分为基本类型值的传递和引用类型值的传递），对此我感到困惑，因为参数只能按值传递，而访问变量却有两种方式，那么在向函数传递引用值时到底时怎么传值的？  </span><br><span class="line">传递基本数据类型的值好理解，**其实传递引用类型值时传递的仍然是值，传递的时候会把这个值在内存中的地址复制给一个局部变量，也就是形参，因此形参的变化会反映在外部**，如下代码就说明了这一点</span><br></pre></td></tr></table></figure>
+<script>
+    function Person() {
+        this.name = "hui";
+    }
+    var per1 = new Person();
+    function setname(per) {
+        per.name = "dong";
+        per = new Person();
+        per.name = "tian";
+        console.log("局部" + per.name);  //输出 局部tian
+    }
+    console.log(per1.name);  //输出hui
+    setname(per1);
+    console.log(per1.name);  //输出dong
+</script>
+<p>```</p>
+<p>注意此处还在函数内部新建了一个同名的对象per，如果per1是按引用传递的，那么per就会自动修改为指向其name属性为tian的新对象。但当接下来在外部访问per1.name是dong，这说明在函数内部修改了参数的值但原始的引用仍然保持不变。实际上在函数内部重写per时，这个变量引用的就是一个局部对象了。而这个局部对象会在函数执行完毕后立即被销毁。</p>
+<h2 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h2><h2 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2>
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>Thank you!<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          YAMA
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/Y-thdong/2020/02/09/JavaScript-winter/" title="JavaScript-winter" target="_blank">https://github.com/Y-thdong/2020/02/09/JavaScript-winter/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -242,16 +384,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/09/JavaScript-winter/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Y-thdong/2020/02/09/JavaScript-winter/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/31/jQuery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -266,711 +468,43 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/31/jQuery/">jQuery</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/12/31/jQuery/" class="archive-article-date">
-        <time datetime="2019-12-31T09:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/12/31/jQuery/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/31/jQuery/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原型-amp-原型链-？"><span class="toc-number">1.</span> <span class="toc-text">原型&amp;原型链 ？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#执行环境及作用域"><span class="toc-number">2.</span> <span class="toc-text">执行环境及作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#垃圾收集"><span class="toc-number">3.</span> <span class="toc-text">垃圾收集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-number">4.</span> <span class="toc-text">小结</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-Git笔记-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/">Git笔记</a>
-	
-    </h1>
-  
 
+<div id="SOHUCS" sid="JavaScript-winter" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
 
-  
-  
-<a href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/" class="archive-article-date">
-        <time datetime="2019-12-14T07:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-14</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/14/Git%E7%AC%94%E8%AE%B0-md/">展开全文 >></a>
-    </p>
-    
 
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Android笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/">Android笔记</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-11-29T14:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/29/Android%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/">Java笔记</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-11-29T14:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!--toc-->
-    
-    <a class="article-more-a" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/29/Java%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-FPGA复习专用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/">FPGA复习专用</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/" class="archive-article-date">
-        <time datetime="2019-11-14T09:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/14/FPGA%E5%A4%8D%E4%B9%A0%E4%B8%93%E7%94%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-11-11随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/">2019.11.11随笔</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/" class="archive-article-date">
-        <time datetime="2019-11-11T14:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/11/2019-11-11%E9%9A%8F%E7%AC%94/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微电子复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/">微电子复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2019-11-04T10:23:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/04/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-单词1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/">单词1</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/11/01/%E5%8D%95%E8%AF%8D1/" class="archive-article-date">
-        <time datetime="2019-10-31T16:00:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/11/01/%E5%8D%95%E8%AF%8D1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jQuery-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/10/21/jQuery-HTML/">jQuery HTML</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/10/21/jQuery-HTML/" class="archive-article-date">
-        <time datetime="2019-10-21T09:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!-- toc -->
-    
-    <a class="article-more-a" href="/2019/10/21/jQuery-HTML/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/21/jQuery-HTML/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1010,8 +544,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
